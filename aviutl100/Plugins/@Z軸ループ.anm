@@ -1,0 +1,18 @@
+@Z軸ループ
+--track0:ループ回数,0,500,10,1
+--track1:間隔,1,1000,100
+--track2:速度,-1000,1000,0,1
+--track3:ねじり,-3600,3600,0
+
+local num=obj.track0
+local d=obj.track1
+local v=obj.track2
+local dth=math.rad(obj.track3/num)
+
+local D=d*num
+
+for i=0,num do
+ z=((d*i)+(v*obj.frame)%d)
+ rz=z*dth
+ obj.draw(0,0,z,1,1,0,0,rz)
+end

@@ -1,0 +1,29 @@
+@ƒVƒƒƒbƒ^[
+--track0:‰ñ“],-3600,3600,0
+--track1:Šg‘å’²®,1,10000,100
+--dialog:}Œ`/fig,fig="ŽlŠpŒ`";F/col,col="0x000000";c‰¡”ä“,asp_dia=0;•Â‚Ü‚è’²®,line_plus=0;‰Á‘¬“x(>0),beki_dia=1;¸“x(>0),seido_dia=0.5;
+
+local rz=obj.track0
+local t = obj.getvalue("scenechange")
+local maxR=math.sqrt(obj.w^2+obj.h^2)
+local asp=obj.h/obj.w
+local beki=beki_dia
+local seido=asp*seido_dia
+local x
+
+if t<0.5 then
+ obj.draw()
+ x=(t*2)^beki/2
+else
+ x=((1-t)*2)^beki/2
+end 
+
+local zoom=(obj.track1+100*(1-math.abs(asp)))/100/seido
+local size=maxR
+local line=(size*x+line_plus)
+
+obj.load("figure",fig,col,size*seido,line*seido)
+
+obj.aspect=asp_dia/100
+
+obj.draw(0,0,0,zoom,1,0,0,rz)

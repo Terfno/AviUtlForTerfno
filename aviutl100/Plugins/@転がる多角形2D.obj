@@ -1,0 +1,88 @@
+@ì]Ç™ÇÈëΩäpå`2D
+--track0:ÉTÉCÉY,1,1500,100
+--track1:ÉâÉCÉìïù%,0,100,100
+--track2:ç¿ïW,-3600,3600,0
+--track3:ínñ äpìx,-360,360,0
+--dialog:äpêî,KAKU_dia=4;êF/col,col="0xffffff";
+
+--ÉÜÉEéÅÇÃê≥ëΩäpå`Çégóp
+local function reg_polygon(size,thick,num,color,obj)
+ obj.setoption("drawtarget", "tempbuffer", size, size)
+ obj.setoption("blend", "alpha_add")
+ obj.load("figure", "éläpå`", color, 1)
+ size = size / 2
+ local theta =- (math.pi) / 2
+ local theta_add = (math.pi * 2 ) / num
+ local drawpoly, sin, cos = obj.drawpoly, math.sin, math.cos
+ local x1, y1 = cos(theta) * size, -sin(theta) * size
+ for i = 1, num do
+  theta = theta + theta_add
+  local x2, y2 = cos(theta) * size, -sin(theta) * size
+  drawpoly(x1,y1,0, x2,y2,0, x2*thick,y2*thick,0, x1*thick,y1*thick,0)
+  x1, y1 = x2, y2
+ end
+ obj.load("tempbuffer")
+end
+
+--xé≤é¸ÇËâÒì]ä÷êî
+local function Rot_x(x,y,z,angle)
+ local x2,y2,z2
+ x2=x
+ y2=y*math.cos(angle)-z*math.sin(angle)
+ z2=y*math.sin(angle)+z*math.cos(angle)
+ return x2,y2,z2
+end
+--yé≤é¸ÇËâÒì]ä÷êî
+local function Rot_y(x,y,z,angle)
+ local x2,y2,z2
+ x2=x*math.cos(angle)+z*math.sin(angle)
+ y2=y
+ z2=-x*math.sin(angle)+z*math.cos(angle)
+ return x2,y2,z2
+end
+--zé≤é¸ÇËâÒì]ä÷êî
+local function Rot_z(x,y,z,angle)
+ local x2,y2,z2
+ x2=x*math.cos(angle)-y*math.sin(angle)
+ y2=x*math.sin(angle)+y*math.cos(angle)
+ z2=z
+ return x2,y2,z2
+end
+
+local ORX,ORY,ORZ=obj.getvalue("rx"),obj.getvalue("ry"),obj.getvalue("rz")
+local ZOOM=obj.getvalue("zoom")/100
+local num=KAKU_dia
+local size=obj.track0
+local line=100-obj.track1
+local R=size/2--ê≥ëΩäpå`ÇÃì‡ê⁄îºåa
+local RZ,CX,CY=obj.track2,0,0
+local ROT=obj.track3
+local dtheta=2*math.pi/num
+local drot=math.deg(dtheta)
+local sides=R*math.sqrt(2*(1-math.cos(dtheta)))--ï”ÇÃí∑Ç≥
+
+reg_polygon(size,line/100,num,col,obj)
+
+local change_rot=360/num
+
+local RZ_state=math.floor(((math.floor(RZ+drot/2))%360)/change_rot)
+local RZ_state2=math.floor((math.floor(RZ+drot/2))/change_rot)
+
+local C_i=RZ_state
+
+CX,CY=R*math.cos(-C_i*dtheta+math.pi/2),R*math.sin(-C_i*dtheta+math.pi/2)
+
+local X_plus,Y_plus,Z_plus=0,0,0
+
+X_plus=RZ_state2*sides*math.cos(math.rad(ROT))
+Y_plus=RZ_state2*sides*math.sin(math.rad(ROT))
+
+X_plus,Y_plus,Z_plus=Rot_y(X_plus,Y_plus,Z_plus,math.rad(ORY))
+X_plus,Y_plus,Z_plus=Rot_x(X_plus,Y_plus,Z_plus,math.rad(ORX))
+
+obj.rz=RZ+ROT
+obj.cx=CX
+obj.cy=CY
+obj.ox=X_plus*ZOOM
+obj.oy=Y_plus*ZOOM
+obj.oz=Z_plus*ZOOM

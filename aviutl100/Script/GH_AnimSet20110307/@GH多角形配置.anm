@@ -1,0 +1,152 @@
+--
+-- ■収録アニメーション効果
+--　　多角形配置-1(定義のみ)
+--　　多角形ずらし設定
+--　　多角形配置-2(描画)
+--
+
+
+@多角形配置-1(定義のみ)
+--track0:繰り返し,0,100,1
+--track1:隙間,-1000,1000,0
+--track2:捻り,-360,360,0
+--track3:向き,0,2,1
+--param:kijun=0;
+--
+-- このアニメーション効果の適用は必須。
+--
+-- ●向き
+--    0:回転なし
+--    1:表面を多角形の外側に向ける
+--    2:表側を多角形の内側に向ける
+-- ●kijun（繰り返し時の基準）
+--　　　0：上基準or左基準
+--　　　1：中央基準
+--　　　2：下基準or右基準
+--
+sz_rep=math.floor(obj.track0)
+sz_space=obj.track1
+sz_rot=obj.track2
+sz_dir=math.floor(obj.track3)
+shiftX=0
+shiftY=0
+shiftZ=0
+shiftR=0
+
+
+@多角形ずらし設定
+--track0:Ｘ差,-1000,1000,0
+--track1:Ｙ差,-1000,1000,0
+--track2:Ｚ差,-1000,1000,0
+--track3:半径差,-1000,1000,0
+--
+-- ピースの位置や半径をずらしたい場合のみ使う。
+--　「あるピースから見た、軸のプラス側のピースの相対座標と半径差」
+-- を表す。
+-- 多角形の軸と同じ軸については「隙間」との和が合計差分になる。
+--
+shiftX=obj.track0
+shiftY=obj.track1
+shiftZ=obj.track2
+shiftR=obj.track3
+
+
+@多角形配置-2(描画)
+--track0:Ｎ角形,3,30,5
+--track1:表示個数,0,30,5
+--track2:半径調整,-1000,1000,0
+--track3:回転,-3600,3600,0
+--check0:縦方向に並べる,0
+--
+-- 多角形の描画処理。
+--
+n=math.floor(obj.track0)
+disp=math.floor(obj.track1)
+if ( n < disp ) then
+  disp=n
+end
+radjust=obj.track2
+rotadjust=obj.track3
+dir=obj.check0
+theta=math.pi*(n-2)/(2*n)
+if ( dir ) then -- 縦向き
+    basesize=obj.h
+    shiftObj=obj.w
+    if(kijun==1) then -- 中央基準
+      -- 最初のピースの座標と捻り角度
+      baseX = -0.5*(sz_rep-1)*(obj.w+sz_space+shiftX)
+      baseY = -0.5*(sz_rep-1)*shiftY
+      baseZ = -0.5*(sz_rep-1)*shiftZ
+      baseSpin = -0.5*(sz_rep-1)*sz_rot
+      baseR = (basesize*math.tan(theta)/2+radjust) - 0.5*(sz_rep-1)*shiftR
+    else -- 上基準または下基準
+      -- 最初のピースの座標と捻り角度
+      baseX = 0
+      baseY = 0
+      baseZ = 0
+      baseSpin = 0
+      baseR = (basesize*math.tan(theta)/2+radjust)
+    end
+else -- 横向き
+    basesize=obj.w
+    shiftObj=obj.h
+    if(kijun==1) then -- 中央基準
+      -- 最初のピースの座標と捻り角度
+      baseX = -0.5*(sz_rep-1)*shiftX
+      baseY = -0.5*(sz_rep-1)*(obj.h+sz_space+shiftY)
+      baseZ = -0.5*(sz_rep-1)*shiftZ
+      baseSpin = -0.5*(sz_rep-1)*sz_rot
+      baseR = (basesize*math.tan(theta)/2+radjust) - 0.5*(sz_rep-1)*shiftR
+    else -- 上基準または下基準
+      -- 最初のピースの座標と捻り角度
+      baseX = 0
+      baseY = 0
+      baseZ = 0
+      baseSpin = 0
+      baseR = (basesize*math.tan(theta)/2+radjust)
+    end
+end
+if(kijun==2) then -- 下基準の場合
+  sz_space=-sz_space
+  sz_rot = -sz_rot
+  shiftX = -shiftX
+  shiftY = -shiftY
+  shiftZ = -shiftZ
+  shiftR = -shiftR
+  shiftObj = -shiftObj
+end
+for j=0,sz_rep-1 do
+  r = baseR + shiftR * j
+  rotshift = baseSpin + sz_rot*j
+  if(dir) then
+      diffX = baseX + (shiftObj + sz_space + shiftX) * j
+      diffY = baseY + shiftY * j
+      diffZ = baseZ + shiftZ * j
+  else
+      diffX = baseX + shiftX * j
+      diffY = baseY + (shiftObj + sz_space + shiftY) * j
+      diffZ = baseZ + shiftZ * j
+  end
+  for i=0,disp-1 do
+    rot = i*360/n+rotadjust+rotshift
+    if ( dir ) then --縦方向に並べる
+      y = r*math.sin(math.pi/180*rot)
+      z = -r*math.cos(math.pi/180*rot)
+      if(sz_dir==0) then
+        rot = 0
+      elseif(sz_dir==2) then
+        rot = rot + 180
+      end
+      obj.draw(diffX,y+diffY,z+diffZ,1,1,rot,0,0)
+    else -- 横方向に並べる
+      x = -r*math.sin(math.pi/180*rot)
+      z = -r*math.cos(math.pi/180*rot)
+      if(sz_dir==0) then
+        rot = 0
+      elseif(sz_dir==2) then
+        rot = rot + 180
+      end
+      obj.draw(x+diffX,diffY,z+diffZ,1,1,0,rot,0)
+    end
+  end
+end

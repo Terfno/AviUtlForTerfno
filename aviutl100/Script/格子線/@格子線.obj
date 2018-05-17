@@ -1,0 +1,224 @@
+@格子線
+--track0:結合半径,0.1,1000,300
+--track1:点の数,1,8,2,1
+--track2:線サイズ,1,100,20,1
+--track3:点サイズ,0,100,60,1
+--dialog:線色/col,col_dia="0xffffff";点色/col,colP_dia="0xff0000";線密度,density_dia=50;距離-太さ/chk,L_B_K_dia=0;ｵﾌﾟｼｮﾝの数,option_dia=0;座標,pos_o={-100,0,0,100,0,0};
+
+require("function_kousi_T")
+
+RX,RY,RZ=obj.getvalue("rx"),obj.getvalue("ry"),obj.getvalue("rz")
+r=obj.track0
+num=obj.track1
+density=density_dia/100
+size=obj.track2
+size2=size
+sizeP=obj.track3
+col=col_dia
+colP=colP_dia
+option_num=option_dia
+option_i=0
+L_B_K=L_B_K_dia
+
+pos={}
+d_pos={}
+
+obj.setanchor("pos_o", num ,"xyz")
+
+for i=1,#pos_o do
+ pos[i]=pos_o[i]
+end
+
+obj.setoption("billboard",3)
+
+if(option_num==option_i)then
+ pos=Rotate(pos,RX,RY,RZ)
+ d_pos=pos
+ draw_Point_Line(pos,d_pos,r,obj,col,size,colP,sizeP,L_B_K,RX,RY,RZ)
+else
+ obj.load("text"," ")--呪文
+end
+
+@正多面体格子線
+--track0:結合半径,0.1,1000,300
+--track1:モード,1,5,1,1
+--track2:サイズ,0,2000,100,1
+--track3:線サイズ,0,100,5,1
+--dialog:点サイズ,sizeP_dia=10;線色/col,col_dia="0xffffff";点色/col,colP_dia="0xff0000";線密度,density_dia=50;距離-太さ/chk,L_B_K_dia=0;ｵﾌﾟｼｮﾝの数,option_dia=0;
+
+require("function_kousi_T")
+
+RX,RY,RZ=obj.getvalue("rx"),obj.getvalue("ry"),obj.getvalue("rz")
+r=obj.track0*obj.track2/100
+mode=obj.track1
+density=density_dia/100
+size=obj.track3
+sizeP=sizeP_dia
+tamen_size=obj.track2
+col=col_dia
+colP=colP_dia
+option_num=option_dia
+option_i=0
+L_B_K=L_B_K_dia
+pos={}
+d_pos={}
+
+local G=(1+math.sqrt(5))/2
+
+if(mode==1)then
+pos={-1,-1,-1,-1,1,1,1,-1,1,1,1,-1}
+elseif(mode==2)then
+pos={-1,-1,-1,-1,-1,1,-1,1,-1,-1,1,1,1,-1,-1,1,-1,1,1,1,-1,1,1,1}
+elseif(mode==3)then
+pos={-1,0,0,0,-1,0,0,0,-1,1,0,0,0,1,0,0,0,1}
+elseif(mode==4)then
+pos={0,-1,-G^2,0,1,-G^2,0,-1,G^2,0,1,G^2,-1,-G^2,0,1,-G^2,0,-1,G^2,0,1,G^2,0,-G^2,0,-1,-G^2,0,1,G^2,0,-1,G^2,0,1,-G,-G,-G,-G,-G,G,-G,G,-G,-G,G,G,G,-G,-G,G,-G,G,G,G,-G,G,G,G}
+elseif(mode==5)then
+pos={1,G,0, 1,-G,0, -1,G,0, -1,-G,0, 0,1,G, 0,1,-G, 0,-1,G, 0,-1,-G, G,0,1, G,0,-1, -G,0,1, -G,0,-1}
+end
+
+--拡大
+for i=1,#pos do
+ pos[i]=pos[i]*tamen_size
+end
+
+obj.setoption("billboard",3)
+
+if(option_num==option_i)then
+ pos=Rotate(pos,RX,RY,RZ)
+ d_pos=pos
+ draw_Point_Line(pos,d_pos,r,obj,col,size,colP,sizeP,L_B_K,RX,RY,RZ)
+else
+ obj.load("text"," ")--呪文
+end
+
+
+@正多角形格子線
+--track0:結合半径,0.1,1000,300
+--track1:点の数,3,100,5,1
+--track2:サイズ,0,2000,100,1
+--track3:線サイズ,0,100,5,1
+--dialog:点サイズ,sizeP_dia=10;線色/col,col_dia="0xffffff";点色/col,colP_dia="0xff0000";線密度,density_dia=50;距離-太さ/chk,L_B_K_dia=0;ｵﾌﾟｼｮﾝの数,option_dia=0;
+
+require("function_kousi_T")
+
+RX,RY,RZ=obj.getvalue("rx"),obj.getvalue("ry"),obj.getvalue("rz")
+r=obj.track0*obj.track2/100
+num=obj.track1
+density=density_dia/100
+size=obj.track3
+sizeP=sizeP_dia
+hankei=obj.track2
+col=col_dia
+colP=colP_dia
+option_num=option_dia
+option_i=0
+dsita=math.pi*2/(num)
+L_B_K=L_B_K_dia
+pos={}
+d_pos={}
+
+for i=1,num do
+  pos[3*i-2]=hankei*math.cos(i*dsita+math.pi/4)
+  pos[3*i-1]=hankei*math.sin(i*dsita+math.pi/4)
+  pos[3*i]=0
+end
+
+obj.setoption("billboard",3)
+
+if(option_num==option_i)then
+ pos=Rotate(pos,RX,RY,RZ)
+ d_pos=pos
+ draw_Point_Line(pos,d_pos,r,obj,col,size,colP,sizeP,L_B_K,RX,RY,RZ)
+else
+ obj.load("text"," ")--呪文
+end
+
+
+@正方形格子線
+--track0:結合半径,0.1,1000,100
+--track1:点の数,2,30,3,1
+--track2:サイズ,0,2000,200,1
+--track3:線サイズ,0,100,5,1
+--dialog:点サイズ,sizeP_dia=10;線色/col,col_dia="0xffffff";点色/col,colP_dia="0xff0000";線密度,density_dia=50;距離-太さ/chk,L_B_K_dia=0;ｵﾌﾟｼｮﾝの数,option_dia=0;
+
+require("function_kousi_T")
+
+RX,RY,RZ=obj.getvalue("rx"),obj.getvalue("ry"),obj.getvalue("rz")
+r=obj.track0*obj.track2/100
+num=obj.track1
+density=density_dia/100
+hen=obj.track2
+size=obj.track3
+sizeP=sizeP_dia
+col=col_dia
+colP=colP_dia
+option_num=option_dia
+option_i=0
+dx=hen/(num-1)
+dy=hen/(num-1)
+L_B_K=L_B_K_dia
+pos={}
+d_pos={}
+
+for j=0,num-1 do
+ for i=1,num do
+  pos[3*(i+num*j)-2]=dx*(i-1)-hen/2
+  pos[3*(i+num*j)-1]=dy*j-hen/2
+  pos[3*(i+num*j)]=0
+ end
+end
+
+obj.setoption("billboard",3)
+
+if(option_num==option_i)then
+ pos=Rotate(pos,RX,RY,RZ)
+ d_pos=pos
+ draw_Point_Line(pos,d_pos,r,obj,col,size,colP,sizeP,L_B_K,RX,RY,RZ)
+else
+ obj.load("text"," ")--呪文
+end
+
+
+@飛び舞う格子線
+--track0:結合半径,0.1,1000,300
+--track1:点の数,3,50,5,1
+--track2:サイズ,0,2000,100,1
+--track3:線サイズ,0,100,5,1
+--dialog:点サイズ,sizeP_dia=10;線色/col,col_dia="0xffffff";点色/col,colP_dia="0xff0000";線密度,density_dia=50;距離-太さ/chk,L_B_K_dia=0;速度係数%,v_dia=100;乱数調整,rand_dia=0;ｵﾌﾟｼｮﾝの数,option_dia=0;
+
+require("function_kousi_T")
+
+col=col_dia
+colP=colP_dia
+option_num=option_dia
+option_i=0
+L_B_K=L_B_K_dia
+density=density_dia/100
+pos={}
+d_pos={}
+RX,RY,RZ=obj.getvalue("rx"),obj.getvalue("ry"),obj.getvalue("rz")
+size=obj.track3
+sizeP=sizeP_dia
+r=obj.track0*obj.track2/100
+
+num=obj.track1
+WX,WY,WZ=obj.track2,obj.track2,obj.track2
+v=v_dia/100
+rand_seed=rand_dia
+
+for i=1,num do
+  pos[3*i-2]=obj.rand(-100,100,i+rand_seed,1)*WX*math.cos(obj.rand(0,math.pi,i+rand_seed,1)+obj.rand(-100,100,i+rand_seed,100)*v*obj.time/100)/100
+  pos[3*i-1]=obj.rand(-100,100,i+rand_seed,2)*WY*math.cos(obj.rand(0,math.pi,i+rand_seed,2)+obj.rand(-100,100,i+rand_seed,200)*v*obj.time/100)/100
+  pos[3*i]=obj.rand(-100,100,i+rand_seed,3)*WZ*math.cos(obj.rand(0,math.pi,i+rand_seed,3)+obj.rand(-100,100,i+rand_seed,300)*v*obj.time/100)/100
+end
+
+obj.setoption("billboard",3)
+
+if(option_num==option_i)then
+ pos=Rotate(pos,RX,RY,RZ)
+ d_pos=pos
+ draw_Point_Line(pos,d_pos,r,obj,col,size,colP,sizeP,L_B_K,RX,RY,RZ)
+else
+ obj.load("text"," ")--呪文
+end

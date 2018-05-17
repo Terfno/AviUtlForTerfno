@@ -1,0 +1,43 @@
+@方向ブラ―
+--track0:方向,0,360,0
+--track1:強さ,0,1000,100
+--dialog:手sと,tes=0;
+
+local t = obj.getvalue("scenechange")
+
+obj.effect("方向ブラー","角度",obj.track0,"範囲",obj.track1*t)
+obj.draw(0,0,0,1,1-t)
+
+@拡大&放射ブラ―
+--track0:拡大率,0,10000,500
+--track1:放射ブラ―,0,100,0
+
+local zoom=obj.track0/100
+local t = obj.getvalue("scenechange")
+
+obj.effect("放射ブラ―","範囲",obj.track1*t)
+obj.draw(0,0,0,(1+zoom*t),1-t)
+
+@モザイク
+--track0:サイズ,0,500,20,1
+
+local t = obj.getvalue("scenechange")
+
+obj.effect("モザイク","サイズ",obj.track0*t)
+obj.draw(0,0,0,1,1-t)
+
+@単色化
+--track0:強さ,0,100,100
+--track1:ｴﾌｪｸﾄ%,1,100,100
+--color:"0x000000"
+
+local t = obj.getvalue("scenechange")
+local t_e=t/obj.track1*100
+
+if t>100 then
+ t=100
+end
+
+obj.effect("単色化","強さ",obj.track0*t_e,"color",color)
+
+obj.draw(0,0,0,1,1-t)

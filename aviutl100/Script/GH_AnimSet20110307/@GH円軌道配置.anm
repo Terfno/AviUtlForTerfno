@@ -1,0 +1,53 @@
+@円軌道配置
+--track0:軸,0,2,1
+--track1:向き,0,2,0
+--track2:半径,0,1000,200
+--track3:回転,-3600,3600,0
+--
+--説明
+--  相対座標(ox,oy.oz)を計算された円軌道上に設定する。
+--  複数のオブジェクトを同じ円軌道上に並べるような場合に使う。
+--  （同じ半径にして回転を少しずらして配置する感じ）
+--
+--  向きについて
+--      0: 変化させない
+--      1: 表側を円の外側に向ける(Z軸の場合は上側を円の外側に向ける)
+--      2: 表側を円の内側に向ける(Z軸の場合は上側を円の内側に向ける)
+--
+jiku=obj.track0
+dir=obj.track1
+r=obj.track2
+rot=obj.track3
+if(jiku==0) then --X軸
+  obj.oy = r * math.sin(math.pi/180*rot)
+  obj.oz= - r * math.cos(math.pi/180*rot)
+  if(dir==1) then
+    obj.rx=rot
+  elseif(dir==2) then
+    obj.rx=rot+180
+  end
+elseif(jiku==1) then --Y軸
+  obj.ox = -r * math.sin(math.pi/180*rot)
+  obj.oz = -r * math.cos(math.pi/180*rot)
+  if(dir==1) then
+    obj.ry=rot
+  elseif(dir==2) then
+    obj.ry=rot+180
+  end
+else --Z軸
+  obj.ox = r * math.sin(math.pi/180*rot)
+  obj.oy=  -r * math.cos(math.pi/180*rot)
+  if(dir==1) then
+    obj.rz=rot
+  elseif(dir==2) then
+    obj.rz=rot+180
+  end
+end
+
+
+
+
+
+
+
+

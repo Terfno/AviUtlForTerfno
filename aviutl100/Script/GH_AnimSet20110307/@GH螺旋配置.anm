@@ -1,0 +1,160 @@
+@—†ù-1(’è‹`‚Ì‚İ)
+--track0:²,0,2,2
+--track1:Œü‚«,0,2,1
+--track2:‰Šú”¼Œa,0,10000,100
+--track3:”¼Œa·•ª,-100,100,0
+--param:zoom=0;alpha=0;
+--
+-- œ²
+--    0:X²
+--    1:Y²
+--    2:Z²
+--
+-- œŒü‚«
+--    0:‰ñ“]‚È‚µ(è‘OŒü‚«ŒÅ’è)
+--    1:–Ê‚ğ‰~‚ÌŠO‘¤‚ÉŒü‚¯‚éi²‚ªZ‚Ìê‡‚Íã‘¤‚ğ‰~‚ÌŠO‘¤‚ÉŒü‚¯‚éj
+--    2:–Ê‚ğ‰~‚Ì“à‘¤‚ÉŒü‚¯‚éi²‚ªZ‚Ìê‡‚Íã‘¤‚ğ‰~‚Ì“à‘¤‚ÉŒü‚¯‚éj
+--
+rasen_jiku=math.floor(obj.track0)
+rasen_dir=math.floor(obj.track1)
+rasen_r=obj.track2
+rasen_dr=obj.track3
+
+
+@—†ù-2(•`‰æ)
+--track0:ŒÂ”,0,300,10
+--track1:‰ñ“]·•ª,-360,360,10
+--track2:À•W·•ª,-1000,1000,10
+--track3:‰ñ“],-3600,3600,0
+--check0:‰ñ“]‚É“¯Šú‚µ‚Ä²•ûŒü‚ÉˆÚ“®,0
+n=math.floor(obj.track0)
+drot = obj.track1
+dpos = obj.track2
+rot = obj.track3
+if(rasen_jiku==0) then -- X²—†ù
+  for i=0,n-1 do
+    if(obj.check0 and (drot~=0)) then
+      x = dpos*i + (dpos/drot)*rot
+    else
+      x = dpos*i
+    end
+    y = (rasen_r + rasen_dr*i) * math.sin((rot + drot*i)*math.pi/180)
+    z = - (rasen_r + rasen_dr*i) * math.cos((rot + drot*i)*math.pi/180)
+    dir_rot = 0
+    if(rasen_dir==1) then
+      dir_rot = rot + drot*i
+    elseif(rasen_dir==2) then
+      dir_rot = rot + drot*i + 180
+    end
+    obj.draw(x,y,z,obj.zoom+zoom/100*i,obj.alpha+alpha/100*i,dir_rot,0,0)
+  end
+elseif(rasen_jiku==1) then -- Y²—†ù
+  for i=0,n-1 do
+    x = - (rasen_r + rasen_dr*i) * math.sin((rot + drot*i)*math.pi/180)
+    if(obj.check0 and (drot~=0)) then
+      y = dpos*i + (dpos/drot)*rot
+    else
+      y = dpos*i
+    end
+    z = - (rasen_r + rasen_dr*i) * math.cos((rot + drot*i)*math.pi/180)
+    dir_rot = 0
+    if(rasen_dir==1) then
+      dir_rot = rot + drot*i
+    elseif(rasen_dir==2) then
+      dir_rot = rot + drot*i + 180
+    end
+    obj.draw(x,y,z,obj.zoom+zoom/100*i,obj.alpha+alpha/100*i,0,dir_rot,0)
+  end
+else -- Z²—†ù
+  for i=0,n-1 do
+    x = (rasen_r + rasen_dr*i) * math.cos((-90 +rot + drot*i)*math.pi/180)
+    y = (rasen_r + rasen_dr*i) * math.sin((-90 + rot + drot*i)*math.pi/180)
+    if(obj.check0 and (drot~=0)) then
+      z = dpos*i + (dpos/drot)*rot
+    else
+      z = dpos*i
+    end
+    dir_rot = 0
+    if(rasen_dir==1) then
+      dir_rot = rot + drot*i
+    elseif(rasen_dir==2) then
+      dir_rot = rot + drot*i + 180
+    end
+    obj.draw(x,y,z,obj.zoom+zoom/100*i,obj.alpha+alpha/100*i,0,0,dir_rot)
+  end
+end
+
+
+@TAŒÂ•Ê—†ù-1(’è‹`‚Ì‚İ)
+--track0:²,0,2,2
+--track1:Œü‚«,0,2,1
+--track2:‰Šú”¼Œa,0,10000,100
+--track3:”¼Œa·•ª,-100,100,0
+--param:zoom=0;alpha=0;
+--
+-- œ²
+--    0:X²
+--    1:Y²
+--    2:Z²
+--
+-- œŒü‚«
+--    0:‰ñ“]‚È‚µ(è‘OŒü‚«ŒÅ’è)
+--    1:–Ê‚ğ‰~‚ÌŠO‘¤‚ÉŒü‚¯‚éiZ²‚Ìê‡‚Íã‘¤‚ğ‰~‚ÌŠO‘¤‚ÉŒü‚¯‚éj
+--    2:–Ê‚ğ‰~‚Ì“à‘¤‚ÉŒü‚¯‚éiZ²‚Ìê‡‚Íã‘¤‚ğ‰~‚Ì“à‘¤‚ÉŒü‚¯‚éj
+--
+tar_jiku=math.floor(obj.track0)
+tar_dir=math.floor(obj.track1)
+tar_r=obj.track2
+tar_dr=obj.track3
+
+
+@TAŒÂ•Ê—†ù-2(•`‰æ)
+--track0:‰ñ“]·•ª,-360,360,10
+--track1:À•W·•ª,-1000,1000,10
+--track2:‰ñ“],-3600,3600,0
+--check0:‰ñ“]‚É“¯Šú‚µ‚Ä²•ûŒü‚ÉˆÚ“®,0
+drot = obj.track0
+dpos = obj.track1
+rot = obj.track2
+obj.zoom=obj.zoom+zoom/100*obj.index
+obj.alpha=obj.alpha+alpha/100*obj.index
+if(tar_jiku==0) then -- X²—†ù
+    if(obj.check0 and (drot~=0)) then
+      obj.ox = dpos*obj.index + (dpos/drot)*rot
+    else
+      obj.ox = dpos*obj.index
+    end
+    obj.oy = (tar_r + tar_dr*obj.index) * math.sin((rot + drot*obj.index)*math.pi/180)
+    obj.oz = - (tar_r + tar_dr*obj.index) * math.cos((rot + drot*obj.index)*math.pi/180)
+    if(tar_dir==1) then
+      obj.rx = rot + drot*obj.index
+    elseif(tar_dir==2) then
+      obj.rx = rot + drot*obj.index + 180
+    end
+elseif(tar_jiku==1) then -- Y²—†ù
+    obj.ox = - (tar_r + tar_dr*obj.index) * math.sin((rot + drot*obj.index)*math.pi/180)
+    if(obj.check0 and (drot~=0)) then
+      obj.oy = dpos*obj.index + (dpos/drot)*rot
+    else
+      obj.oy = dpos*obj.index
+    end
+    obj.oz = - (tar_r + tar_dr*obj.index) * math.cos((rot + drot*obj.index)*math.pi/180)
+    if(tar_dir==1) then
+      obj.ry = rot + drot*obj.index
+    elseif(tar_dir==2) then
+      obj.ry = rot + drot*obj.index + 180
+    end
+else -- Z²—†ù
+    obj.ox = (tar_r + tar_dr*obj.index) * math.cos((-90 + rot + drot*obj.index)*math.pi/180)
+    obj.oy = (tar_r + tar_dr*obj.index) * math.sin((-90 + rot + drot*obj.index)*math.pi/180)
+    if(obj.check0 and (drot~=0)) then
+      obj.oz = dpos*obj.index + (dpos/drot)*rot
+    else
+      obj.oz = dpos*obj.index
+    end
+    if(tar_dir==1) then
+      obj.rz = rot + drot*obj.index
+    elseif(tar_dir==2) then
+      obj.rz = rot + drot*obj.index + 180
+    end
+end

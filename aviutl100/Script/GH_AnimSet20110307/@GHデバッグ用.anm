@@ -1,0 +1,18 @@
+@dbg1
+dbg1=string.format(
+"obj.x = %.2f\nobj.y = %.2f\nobj.z = %.2f\nobj.ox = %.2f\nobj.oy = %.2f\nobj.oz = %.2f\nobj.rx = %.2f\nobj.ry = %.2f\nobj.rz = %.2f\nobj.zoom = %.2f\nobj.alpha = %.2f\nobj.aspect = %.2f\nobj.w= %.2f\nobj.h = %.2f",
+obj.x,obj.y,obj.z,
+obj.ox,obj.oy,obj.oz,
+obj.rx,obj.ry,obj.rz,
+obj.zoom,obj.alpha,obj.aspect,
+obj.w,obj.h
+)
+
+@dbg2
+dbg2=string.format(
+"obj.screen_w = %.2f\nobj.screen_h = %.2f\nobj.framerate = %.2f\nobj.frame = %.2f\nobj.time = %.2f\nobj.totalframe = %.2f\nobj.totaltime = %.2f\nobj.layer = %.2f",
+obj.screen_w,obj.screen_h,
+obj.framerate,obj.frame,obj.time,
+obj.totalframe,obj.totaltime,
+obj.layer
+)

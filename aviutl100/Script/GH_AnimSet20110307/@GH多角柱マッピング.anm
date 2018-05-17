@@ -1,0 +1,518 @@
+--
+-- ■収録アニメーション効果
+--　　多角柱マッピング基本設定
+--　　多角柱テキスト設定
+--　　多角柱図形設定
+--　　多角柱輪切り設定
+--　　多角柱輪切りずらし設定
+--　　多角柱マッピング（縦）
+--　　多角柱マッピング（横）
+--
+
+
+@多角柱マッピング基本設定
+--track0:再生位置,0,1800,0
+--track1:不透明度,0,100,100
+--track2:縦横比,-100,100,0
+--param:type="text";val="図形名or文字列orファイル名を指定☆";
+ld_time=obj.track0
+alpha=obj.track1/100
+ld_aspect=obj.track2/100
+--
+-- このアニメーション効果の適用は必須。
+--
+-- 「テキスト設定」「図形設定」「輪切り設定」「輪切りずらし」の変数もここで初期化しておく。
+-- 細かい設定をしたい場合のみ別途これらのアニメーション効果を追加する。
+--
+fontName="MS UI Gothic";
+fontSize=32
+fontType=0
+figColor=0xffffff
+figSize=100
+figLine=1000
+cyl_cut=1
+cyl_space=0
+cyl_spin=0
+kijun=0
+shiftR=0
+shiftX=0
+shiftY=0
+shiftZ=0
+
+@多角柱テキスト設定
+--track0:サイズ,0,300,32
+--track1:タイプ,0,4,0
+--param:fontName="MS UI Gothic";
+fontSize=obj.track0
+fontType=obj.track1
+
+
+@多角柱図形設定
+--track0:サイズ,0,1000,100
+--track1:ライン幅,0,1000,1000
+--param:figColor=0xffffff;
+figSize=obj.track0
+figLine=obj.track1
+
+
+@多角柱輪切り設定
+--track0:輪切り数,1,30,1
+--track1:隙間,-1000,1000,0
+--track2:捻り,-3600,3600,0
+--track3:半径差,-1000,1000,0
+--param:kijun=0;
+cyl_cut=math.floor(obj.track0)
+cyl_space=obj.track1
+cyl_spin=obj.track2
+shiftR=obj.track3
+--
+-- ●輪切り
+--　　多角柱を輪切りにする数。輪切り後のピースの数に相当。１は輪切りにしない。
+-- ●隙間
+--　　輪切りにしたそれぞれの多角柱の間隔。
+-- ●捻り
+--　　輪切りにした多角柱１つあたりの回転差。
+--　　軸プラス方向のピースを何度捻るかを表す。
+-- ●半径差
+--　　輪切りにした多角柱１つあたりの半径差。
+--　　軸プラス方向のピースの半径をいくつ増すかを表す。
+-- ●kijun（輪切りをずらしていく基準となる位置）
+--　　　0：上基準or左基準
+--　　　1：オブジェクト中央基準
+--　　　2：下基準or右基準
+--
+
+@多角柱輪切りずらし設定
+--track0:Ｘ差,-1000,1000,0
+--track1:Ｙ差,-1000,1000,0
+--track2:Ｚ差,-1000,1000,0
+shiftX=obj.track0
+shiftY=obj.track1
+shiftZ=obj.track2
+--
+-- あるピースから見た、多角柱の軸プラス方向にあるピースの相対座標を表す。
+-- 多角柱の軸と同じ軸については、「隙間」との和が合計ずらし量になる。
+--
+
+
+@多角柱マッピング（縦）
+--track0:分割数,3,30,5
+--track1:表示個数,0,30,5
+--track2:半径調整,-2000,2000,0
+--track3:回転,-3600,3600,0
+--param:cyl_dir=1;effect=1;
+--
+-- ●cyl_dir（面の向き）
+--    0:向きの指定なし
+--    1:表面を多角柱の外側に向ける
+--    2:表側を多角柱の内側に向ける
+--
+cyl_div=math.floor(obj.track0)
+cyl_disp=math.floor(obj.track1)
+if(cyl_div<cyl_disp) then
+  cyl_disp=cyl_div
+end
+cyl_r_adjust=obj.track2
+cyl_rotshift=obj.track3
+--
+-- 処理の流れは以下のような感じ。
+--　　１．obj.load(type,val)を使い、指定したテキストやファイルのイメージを読み込む。
+--　　２．クリッピングで一部を切り出す。
+--　　３．切り出した部分を配置する。
+--　　４．１～３を繰り返し、最終的に多角柱を形成する。
+--　　　　分割数を増やせば円柱に近くなるが重くなる。
+--
+-- ※拡張編集ver.0.87eで実装されたobj.load()を使っているため、
+--　　ver.0.87e以降のバージョンでないと動作しません。
+--
+-- ※クリッピングのパラメータの最大値が1000なので、
+--　　幅や高さが1000を越えると正常に動作しません。
+--
+-- 処理開始
+--
+if(cyl_disp<=0) then
+  -- 表示個数が0以下なら空文字列を読みこんで映像を非表示にする。
+  -- 良い方法ではないかもしれない。
+  obj.load("text","")
+else
+  -- まずは一度読み込んで、obj.wやobj.hなどをもとに基本パラメータを計算
+  obj.setfont(fontName,fontSize,fontType)
+  if(type=="figure") then
+    obj.load(type,val,figColor,figSize,figLine)
+  elseif(type=="framebuffer") then
+    obj.load(type)
+  else
+    obj.load(type,val)
+  end
+  --
+  -- 引数無しでobj.effect()を呼び出し、後ろのフィルタ効果を実行させる
+  -- 描画したものをフェードさせたりしたい場合に使えるかなと。
+  -- 追加するフィルタ効果の内容によっては正常に動作しないかもしれない。
+  if(effect==1) then
+    obj.effect()
+  end
+  --
+  -- cyl_wはaspectを考慮した横幅。
+  -- 配置座標はaspectを考慮して考える必要があるが
+  -- クリッピングはaspectを考慮せずに設定する必要がある。
+  --
+  if(ld_aspect>0) then
+    cyl_w=obj.w*(1-ld_aspect)
+  else
+    cyl_w=obj.w
+  end
+  basesize = cyl_w/cyl_div -- ピース１つあたりの幅
+  clipW=obj.w/cyl_div -- 横クリッピングの基本単位
+  if (cyl_dir==2) then -- 内側を向く場合
+    rotbase = 180/cyl_div + cyl_rotshift
+    rotdiff = 360/cyl_div
+  else
+    rotbase = 180*(cyl_div-1)/cyl_div + cyl_rotshift
+    rotdiff = -360/cyl_div
+  end
+  -- 輪切り用パラメータ計算
+  if(ld_aspect<0) then
+    cyl_h=obj.h*(1+ld_aspect)
+  else
+    cyl_h=obj.h
+  end
+  baseH = cyl_h/cyl_cut -- ピース１つ当たりの高さ
+  clipH = obj.h/cyl_cut -- 縦クリッピングの基本単位
+  -- 一番上のピースの座標と捻り角度と半径
+  if(kijun==1) then -- 中央基準
+    baseY = -0.5*(cyl_cut-1)*(cyl_space+shiftY)
+    baseX = -0.5*(cyl_cut-1)*shiftX
+    baseZ = -0.5*(cyl_cut-1)*shiftZ
+    baseSpin = -0.5*(cyl_cut-1)*cyl_spin
+    theta = math.pi*(cyl_div-2)/(2*cyl_div)
+    baseR = basesize * math.tan(theta)/2 + cyl_r_adjust - 0.5*(cyl_cut-1)*shiftR
+  elseif(kijun==2) then -- 下基準
+    baseY = -(cyl_cut-1)*(cyl_space+shiftY)
+    baseX = -(cyl_cut-1)*shiftX
+    baseZ = -(cyl_cut-1)*shiftZ
+    baseSpin = -(cyl_cut-1)*cyl_spin
+    theta = math.pi*(cyl_div-2)/(2*cyl_div)
+    baseR = basesize * math.tan(theta)/2 + cyl_r_adjust - (cyl_cut-1)*shiftR
+  else -- 上基準
+    baseY = 0
+    baseX = 0
+    baseZ = 0
+    baseSpin = 0
+    theta = math.pi*(cyl_div-2)/(2*cyl_div)
+    baseR = basesize * math.tan(theta)/2 + cyl_r_adjust
+  end
+  -- 描画開始
+  for i=0,cyl_cut-1 do
+    r = baseR + shiftR * i
+    if(cyl_dir==2) then
+      r = -r
+    end
+    py = baseY + (cyl_space+shiftY) * i
+    diffX = baseX + shiftX * i
+    diffZ = baseZ + shiftZ * i
+    spinShift = baseSpin + cyl_spin * i
+    for j=0,cyl_disp-1 do
+      obj.setfont(fontName,fontSize,fontType)
+      if(type=="figure") then
+        obj.load(type,val,figColor,figSize,figLine)
+      elseif(type=="movie") then
+        obj.load(type,val,obj.time+ld_time)
+      else
+        obj.load(type,val)
+      end
+      --
+      -- 引数無しでobj.effect()を呼び出し、後ろのフィルタ効果を実行させる
+      -- 描画したものをフェードさせたりしたい場合に使えるかなと。
+      -- 追加するフィルタ効果の内容によっては正常に動作しないかもしれない。
+      if(effect==1) then
+        obj.effect()
+      end
+      divCenterX = -cyl_w/2 + basesize*( 0.5 + j )
+      obj.aspect=ld_aspect
+      rot = rotbase + spinShift + j * rotdiff
+      sinY=math.sin(math.rad(rot))
+      cosY=math.cos(math.rad(rot))
+      if(cyl_dir==0) then
+        rot=0
+        px = -r * sinY - divCenterX
+        pz = -r * cosY
+      else
+        px = -r * sinY - cosY * divCenterX
+        pz = -r * cosY + sinY * divCenterX
+      end
+      obj.effect("クリッピング","上",clipH*i, "下",clipH*(cyl_cut-1-i), "左",clipW*j, "右",clipW*(cyl_div-1-j))
+      obj.draw(px+diffX,py,pz+diffZ,1,alpha,0,rot,0)
+    end
+  end
+end
+
+
+@多角柱マッピング（横）
+--track0:分割数,3,30,5
+--track1:表示個数,0,30,5
+--track2:半径調整,-2000,2000,0
+--track3:回転,-3600,3600,0
+--param:cyl_dir=1;effect=1;
+--
+-- ●cyl_dir（面の向き）
+--    0:向きの指定なし
+--    1:表面を多角柱の外側に向ける
+--    2:表側を多角柱の内側に向ける
+--
+cyl_div=math.floor(obj.track0)
+cyl_disp=math.floor(obj.track1)
+if(cyl_div<cyl_disp) then
+  cyl_disp=cyl_div
+end
+cyl_r_adjust=obj.track2
+cyl_rotshift=obj.track3
+--
+-- 処理の流れは以下のような感じ。
+--　　１．obj.load(type,val)を使い、指定したテキストやファイルのイメージを読み込む。
+--　　２．クリッピングで一部を切り出す。
+--　　３．切り出した部分を配置する。
+--　　４．１～３を繰り返し、最終的に多角柱を形成する。
+--　　　　分割数を増やせば円柱に近くなるが重くなる。
+--
+-- ※拡張編集ver.0.87eで実装されたobj.load()を使っているため、
+--　　ver.0.87e以降のバージョンでないと動作しません。
+--
+-- ※クリッピングのパラメータの最大値が1000なので、
+--　　幅や高さが1000を越えると正常に動作しません。
+--
+-- 処理開始
+--
+if(cyl_disp<=0) then
+  -- 表示個数が0以下なら空文字列を読みこんで映像を非表示にする。
+  -- 良い方法ではないかもしれない。
+  obj.load("text","")
+else
+  -- まずは一度読み込んで、obj.wやobj.hなどをもとに基本パラメータを計算
+  obj.setfont(fontName,fontSize,fontType)
+  if(type=="figure") then
+    obj.load(type,val,figColor,figSize,figLine)
+  elseif(type=="framebuffer") then
+    obj.load(type)
+  else
+    obj.load(type,val)
+  end
+  --
+  -- 引数無しでobj.effect()を呼び出し、後ろのフィルタ効果を実行させる
+  -- 描画したものをフェードさせたりしたい場合に使えるかなと。
+  -- 追加するフィルタ効果の内容によっては正常に動作しないかもしれない。
+  if(effect==1) then
+    obj.effect()
+  end
+  --
+  -- cyl_hはaspectを考慮した高さ。
+  -- 配置座標はaspectを考慮して考える必要があるが
+  -- クリッピングはaspectを考慮せずに設定する必要がある。
+  --
+  if(ld_aspect<0) then
+    cyl_h=obj.h*(1+ld_aspect)
+  else
+    cyl_h=obj.h
+  end
+  basesize = cyl_h/cyl_div -- ピース１つあたりの高さ
+  clipH = obj.h/cyl_div -- 縦クリッピングの基本単位
+  rotbase = -180*(cyl_div-1)/cyl_div + cyl_rotshift
+  rotdiff = 360/cyl_div
+  -- 輪切り用パラメータ計算
+  if(ld_aspect>0) then
+    cyl_w=obj.w*(1-ld_aspect)
+  else
+    cyl_w=obj.w
+  end
+  baseW = cyl_w/cyl_cut -- ピース１つ当たりの幅
+  clipW=obj.w/cyl_cut -- 横クリッピングの基本単位
+  -- 一番左のピースの座標と捻り角度
+  -- 内向きの場合はオブジェクト左側の映像が右側にくることに注意
+  if(cyl_dir==2) then
+    shiftR = -shiftR
+  end
+  theta = math.pi*(cyl_div-2)/(2*cyl_div)
+  if(kijun==1) then -- 中央基準
+    baseX = -0.5*(cyl_cut-1)*(cyl_space+shiftX)
+    baseY = -0.5*(cyl_cut-1)*shiftY
+    baseZ = -0.5*(cyl_cut-1)*shiftZ
+    baseSpin = -0.5*(cyl_cut-1)*cyl_spin
+    baseR = (basesize * math.tan(theta)/2 + cyl_r_adjust) - 0.5*(cyl_cut-1)*shiftR
+  elseif(kijun==2) then -- 右基準
+    if(cyl_dir==2) then -- 内向き
+      baseX = 0
+      baseY = 0
+      baseZ = 0
+      baseSpin = 0
+      baseR = (basesize * math.tan(theta)/2 + cyl_r_adjust)
+    else
+      baseX = -(cyl_cut-1)*(cyl_space+shiftX)
+      baseY = -(cyl_cut-1)*shiftY
+      baseZ = -(cyl_cut-1)*shiftZ
+      baseSpin = -(cyl_cut-1)*cyl_spin
+      baseR = (basesize * math.tan(theta)/2 + cyl_r_adjust) - (cyl_cut-1)*shiftR
+    end
+  else -- 左基準
+    if(cyl_dir==2) then -- 内向き
+      baseX = -(cyl_cut-1)*(cyl_space+shiftX)
+      baseY = -(cyl_cut-1)*shiftY
+      baseZ = -(cyl_cut-1)*shiftZ
+      baseSpin = -(cyl_cut-1)*cyl_spin
+      baseR = (basesize * math.tan(theta)/2 + cyl_r_adjust) - (cyl_cut-1)*shiftR
+    else
+      baseX = 0
+      baseY = 0
+      baseZ = 0
+      baseSpin = 0
+      baseR = (basesize * math.tan(theta)/2 + cyl_r_adjust)
+    end
+  end
+  -- 描画開始
+  for i=0,cyl_cut-1 do
+    r = baseR + shiftR * i
+    px = baseX + (cyl_space + shiftX) * i
+    diffY = baseY + shiftY * i
+    diffZ = baseZ + shiftZ * i
+    spinShift = baseSpin + cyl_spin * i
+    if(cyl_dir==2) then -- 内向きの場合
+      px = -px
+      diffY = -diffY
+      diffZ = -diffZ
+      spinShift=-spinShift
+    end
+    for j=0,cyl_disp-1 do
+      obj.setfont(fontName,fontSize,fontType)
+      if(type=="figure") then
+        obj.load(type,val,figColor,figSize,figLine)
+      elseif(type=="movie") then
+        obj.load(type,val,obj.time+ld_time)
+      else
+        obj.load(type,val)
+      end
+      --
+      -- 引数無しでobj.effect()を呼び出し、後ろのフィルタ効果を実行させる
+      -- 描画したものをフェードさせたりしたい場合に使えるかなと。
+      -- 追加するフィルタ効果の内容によっては正常に動作しないかもしれない。
+      if(effect==1) then
+        obj.effect()
+      end
+      divCenterY = -cyl_h/2 + basesize*( 0.5 + j )
+      obj.aspect=ld_aspect
+      rot = rotbase + spinShift + j * rotdiff
+      sinX=math.sin(math.rad(rot))
+      cosX=math.cos(math.rad(rot))
+      if(cyl_dir==0) then -- 向き指定なし
+        ry=0
+        rot=0
+        py = r * sinX - divCenterY
+        pz = -r * cosX
+      elseif(cyl_dir==1) then -- 外向き
+        ry=0
+        py = r * sinX - divCenterY * cosX
+        pz = -r * cosX - divCenterY * sinX
+      else -- 内向き
+        ry=180
+        py = r * sinX - divCenterY * cosX
+        pz = -r * cosX - divCenterY * sinX
+      end
+      obj.effect("クリッピング","左",clipW*i, "右",clipW*(cyl_cut-1-i), "上",clipH*j, "下",clipH*(cyl_div-1-j))
+      obj.draw(px,py+diffY,pz+diffZ,1,alpha,rot,ry,0)
+    end
+  end
+end
+
+
+
+--[[ 以下メモのようなもの
+
+　●多角柱のつなぎ目は、外側向きでも内側向きでも、必ずＺ軸プラス側の位置にする。
+　　　カメラの初期位置がＺ軸マイナス側にあるので、そのほうが使いやすいはず。
+
+　●座標変換の考え方(多角形の外側を向く場合)
+
+　　　１．オブジェクト中心をZ軸方向に-rずらしたもの(0,0,-r)を
+　　　　　Y軸回転させると考えて座標変換し、回転後のオブジェクト中心座標を求める。
+　　　　　　objX = -r * sinY
+　　　　　　objZ = -r * cosY
+
+　　　２．切り出したピースの中心をZ軸方向に-rずらしたもの(divCenterX,0,-r)を
+　　　　　Y軸回転させると考えて座標変換し、回転後のピース中心座標を求める。
+　　　　　　divX = cosY * divCenterX - r * sinY
+　　　　　　divZ = -sinY * divCenterX - r + cosY
+
+　　　３．座標の差分を求める。
+　　　　　　diffX = objX-divX
+　　　　　　　　　= -r*sinY - (cosY * divCenterX - r * sinY)
+　　　　　　　　　= -cosY*divCenterX
+　　　　　　diffZ = objZ-divZ
+　　　　　　　　　= -r * cosY - (-sinY * divCenterX - r + cosY)
+　　　　　　　　　= sinY * divCenterX
+
+　　　４．差分の分だけずらして配置することで、ピース中心がオブジェクト中心の位置にくるようにする。
+　　　　　　px = objX+diffX
+　　　　　　　　= -r * sinY -cosY*divCenterX
+　　　　　　pz = objZ+diffZ
+　　　　　　　　= -r * cosY + sinY * divCenterX
+
+　●（多角形の内側を向く場合）
+
+　　　１．オブジェクト中心をZ軸方向にrずらしたもの（0,0,r）を
+　　　　　Y軸回転させると考えて座標変換し、回転後のオブジェクト中心座標を求める。
+　　　　　　　objX=r*sinY
+               objZ=r*cosY
+
+　　　２．考えてみれば（オブジェクト中心－ピース中心）のベクトルは（-divCenterX,0,0）なので
+　　　　　これをY軸回転させれば差分移動ベクトルが出るや。
+　　　　　　diffX = -cosY*divCenterX
+　　　　　　diffZ = sinY * divCenterX
+
+　　　３．差分の分だけずらして配置することで、ピース中心がオブジェクト中心の位置にくるようにする。
+　　　　　　px = objX+diffX
+　　　　　　　　= r * sinY -cosY*divCenterX
+　　　　　　pz = objZ+diffZ
+　　　　　　　　= r * cosY + sinY * divCenterX
+
+　　　つうことは内側を向く場合、処理をなるべく外向きを共用化するには
+　　　　　r=-r
+　　　にして、
+　　　　　rotbaseは180/n
+　　　にして
+　　　　　iごとに360/nずつ回転させていく
+　　　ってやればいいのかな。
+]]
+
+
+--[[
+
+　●横モードの変換
+
+　●外向き
+
+　　　１．（0,0,-r）をX軸まわりに回転
+　　　　　objY=r*sinX
+　　　　　objZ=-r*cosX
+
+　　　２．差分ベクトルは（0,-divCenterY,0）なので
+　　　　　diffY=-divCenterY*cosX
+　　　　　diffZ=-divCenterY*sinX
+
+　　　３．差分だけずらして配置するから
+　　　　　py=r*sinX-divCenterY*cosX
+　　　　　pz=-r*cosX-divCenterY*sinX
+
+　　　マイナス角度に回してからプラスしていく。
+
+　●内向き
+　　　１．（0,0,r）をY軸まわりに180度回転してからX軸まわりに回転させる
+　　　　　　objY=r*sinX
+　　　　　　objZ=-r*cosX
+
+　　　２．差分ベクトル（0,-divCenterY,0）をY軸まわりに180度回転してからX軸まわりに回転させる
+　　　　　　diffY=-divCenterY*cosX
+　　　　　　diffZ=-divCenterY*sinX
+
+　　　考えてみればry=180が加わるだけで座標は外向きと同じか。
+　　　マイナス角度に回してからプラスしていく。
+　　　ただしオブジェクト左側部分がX軸プラス側に配置されることに注意。
+
+]]
+
