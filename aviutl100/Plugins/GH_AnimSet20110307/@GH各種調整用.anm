@@ -1,0 +1,87 @@
+@座標シフト
+--track0:X,-1000,1000,0
+--track1:Y,-1000,1000,0
+--track2:Z,-1000,1000,0
+obj.ox = obj.ox+obj.track0
+obj.oy = obj.oy+obj.track1
+obj.oz = obj.oz+obj.track2
+
+@回転シフト
+--track0:X回転,-3600,3600,0
+--track1:Y回転,-3600,3600,0
+--track2:Z回転,-3600,3600,0
+obj.rx = obj.rx + obj.track0
+obj.ry = obj.ry + obj.track1
+obj.rz = obj.rz + obj.track2
+
+@座標上書き(軸指定)
+--track0:軸,0,2,0
+--track1:座標,-1000,1000,0
+jiku=math.floor(obj.track0)
+if(jiku==0) then
+  obj.ox=obj.track1
+elseif(jiku==1) then
+  obj.oy=obj.track1
+else
+  obj.oz=obj.track1
+end
+
+@回転上書き(軸指定)
+--track0:軸,0,2,0
+--track1:回転,-3600,3600,0
+jiku=math.floor(obj.track0)
+if(jiku==0) then
+  obj.rx=obj.track1
+elseif(jiku==1) then
+  obj.ry=obj.track1
+else
+  obj.rz=obj.track1
+end
+
+@回転上書き(３軸)
+--track0:X回転,-3600,3600,0
+--track1:Y回転,-3600,3600,0
+--track2:Z回転,-3600,3600,0
+obj.rx=obj.track0
+obj.ry=obj.track1
+obj.rz=obj.track2
+
+@TA座標ずらし
+--track0:Xずらし,-1000,1000,0
+--track1:Yずらし,-1000,1000,0
+--track2:Zずらし,-1000,1000,0
+obj.ox = obj.track0*obj.index
+obj.oy = obj.track1*obj.index
+obj.oz = obj.track2*obj.index
+
+@TA回転ずらし
+--track0:Xずらし,-360,360,0
+--track1:Yずらし,-360,360,0
+--track2:Zずらし,-360,360,0
+obj.rx = obj.track0*obj.index
+obj.ry = obj.track1*obj.index
+obj.rz = obj.track2*obj.index
+
+@TA座標ずらし(現在値基準)
+--track0:Xずらし,-1000,1000,0
+--track1:Yずらし,-1000,1000,0
+--track2:Zずらし,-1000,1000,0
+obj.ox = obj.ox + obj.track0*obj.index
+obj.oy = obj.oy + obj.track1*obj.index
+obj.oz = obj.oz + obj.track2*obj.index
+
+@TA回転ずらし（現在値基準）
+--track0:Xずらし,-360,360,0
+--track1:Yずらし,-360,360,0
+--track2:Zずらし,-360,360,0
+obj.rx = obj.rx + obj.track0*obj.index
+obj.ry = obj.ry + obj.track1*obj.index
+obj.rz = obj.rz + obj.track2*obj.index
+
+@TAズームずらし(現在値基準)
+--track0:ずらし量,-100,100,0
+obj.zoom = obj.zoom + obj.track0/100*obj.index
+
+@TA透明度ずらし(現在値基準)
+--track0:ずらし量,-100,100,0
+obj.alpha = obj.alpha + obj.track0/100*obj.index

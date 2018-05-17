@@ -1,0 +1,82 @@
+@多角柱マッピングお試し版
+--track0:分割数,3,50,5
+--track1:回転,-3600,3600,0
+--track2:半径調整,-500,500,0
+--track3:FontSize,12,100,32
+--param:type="text";value="文字列やファイル名を指定してね☆";
+cyl_div_w=math.floor(obj.track0)
+cyl_rotshift=obj.track1
+cyl_r_adjust=obj.track2
+fontsize=obj.track3
+--
+-- 処理の流れは以下のような感じ。
+--　　１．obj.load(type,valkue)を使い、指定したテキストやファイルのイメージを読み込む。
+--　　２．分割した部分をクリッピングで切り出す。
+--　　３．切り出した部分を多角形状に配置する。
+--　　４．１～３を繰り返し、最終的に多角柱を形成する。
+--　　　　分割数を増やせば円柱に近くなるが重くなる。
+--
+-- 拡張編集ver.0.87eで実装されたobj.load()を使っているため、
+-- ver.0.87e以降のバージョンでないと動作しません。
+--
+--
+-- フォントの設定。
+--　　本当はparamで設定できればよかったけど255バイト制限があるので諦めた。
+fontname="MS UI Gothic"
+fonttype=0
+--
+-- 処理開始
+--
+obj.setfont(fontname,fontsize,fonttype)
+obj.load(type,value)
+basesize = obj.w/cyl_div_w
+theta = math.pi*(cyl_div_w-2)/(2*cyl_div_w)
+r = basesize * math.tan(theta)/2 + cyl_r_adjust
+rotbase = 180*(cyl_div_w-1)/cyl_div_w + cyl_rotshift
+for i=0,cyl_div_w-1 do
+  obj.setfont(fontname,fontsize,fonttype)
+  obj.load(type,value)
+  divCenterX = -obj.w/2 + basesize*( 0.5 + i )
+  rot = rotbase - i * 360/cyl_div_w
+  sinY=math.sin(math.rad(rot))
+  cosY=math.cos(math.rad(rot))
+  px = -r * sinY - cosY * divCenterX
+  pz = -r * cosY + sinY * divCenterX
+  obj.effect("クリッピング","左",basesize*i,"右",basesize*(cyl_div_w-1-i))
+  obj.draw(px,0,pz,1,1,0,rot,0)
+end
+
+
+
+--[[ 以下メモのようなもの
+
+　とりあえず横分割による多角柱マッピングだけ実装してみた。
+　映像は多角柱の外側しか向けない。
+
+　●座標変換の考え方
+
+　１．オブジェクト中心をZ軸方向に-rずらしたもの(0,0,-r)を
+　　　Y軸回転させると考えて座標変換し、回転後のオブジェクト中心座標を求める。
+　　　　objX = -r * sinY
+　　　　objZ = -r * cosY
+
+　２．切り出したピースの中心をZ軸方向に-rずらしたもの(divCenterX,0,-r)を
+　　　Y軸回転させると考えて座標変換し、回転後のピース中心座標を求める。
+　　　　divX = cosY * divCenterX - r * sinY
+　　　　divZ = -sinY * divCenterX - r + cosY
+
+　３．座標の差分を求める。
+　　　　diffX = objX-divX
+　　　　　　　= -r*sinY - (cosY * divCenterX - r * sinY)
+　　　　　　　= -cosY*divCenterX
+　　　　diffZ = objZ-divZ
+　　　　　　　= -r * cosY - (-sinY * divCenterX - r + cosY)
+　　　　　　　= sinY * divCenterX
+
+　４．差分の分だけずらして配置することで、ピース中心がオブジェクト中心の位置にくるようにする。
+　　　　px = objX+diffX
+　　　　　　= -r * sinY -cosY*divCenterX
+　　　　pz = objZ+diffZ
+　　　　　　= -r * cosY + sinY * divCenterX
+
+]]

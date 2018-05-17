@@ -1,0 +1,159 @@
+--
+-- ■収録アニメーション効果
+--　　3Dリピート基本設定
+--　　3Dリピート相対回転設定
+--　　3Dリピート相対拡縮・不透明度設定
+--　　3Dリピート描画
+--
+
+@3Dリピート基本設定
+--track0:Ｘ差,-1000,1000,0
+--track1:Ｙ差,-1000,1000,0
+--track2:Ｚ差,-1000,1000,0
+--
+--　「あるピースから見た、軸のプラス側のピースの相対座標と半径差」
+--
+-- ※これの適用は必須。
+--
+-- ※別にこれ自体は基本設定というわけでもないし、これ無しで「3Dリピート描画」だけで
+--　　使えることを目指したのだけど、事前に変数群を初期化したうえで使わないと、
+--　　他で定義した変数をそのまま使ってしまい不安定になるので、
+--　　これを基本設定として適用必須とし、初期化を行なうことにした。
+--
+shiftX=obj.track0
+shiftY=obj.track1
+shiftZ=obj.track2
+--関連変数の初期化
+shiftRx=0
+shiftRy=0
+shiftRz=0
+shiftZoom=0
+baseAlpha=1
+shiftAlpha=0
+
+
+@3Dリピート相対回転設定
+--track0:Ｘ回転差,-3600,3600,0
+--track1:Ｙ回転差,-3600,3600,0
+--track2:Ｚ回転差,-3600,3600,0
+shiftRx=obj.track0
+shiftRy=obj.track1
+shiftRz=obj.track2
+
+@3Dリピート相対拡縮・不透明度設定
+--track0:拡縮差,-300,300,0
+--track1:基本透度,0,100,100
+--track2:不透明差,-100,100,0
+shiftZoom=obj.track0/100
+baseAlpha=obj.track1/100
+shiftAlpha=obj.track2/100
+--
+-- ●メモ
+-- 　　オブジェクトで透明度を設定した場合、それよりも不透明度を増すことはできないようにする。
+-- 　　一応draw()のalphaを1より大きくすれば不透明度を増すこともできるようだが、
+-- 　　1より大きくなった場合、描画処理が保証されない模様。
+-- 　　例えばオブジェクトの透明度がデフォルトの0だった場合、draw()のalphaに8以上の値を設定すると
+-- 　　描画されなかったりする。（値によっては描画されることもある。法則はよくわからない。）
+-- 　　もともとalphaの説明書きが「0：透明、1：不透明」なので、この範囲で使うべきだろう。
+--
+
+
+@3Dリピート描画
+--track0:繰り返し,0,50,2
+--track1:間隔,-1000,1000,0
+--track2:捻り,-3600,3600,0
+--track3:回転,-3600,3600,0
+--param:kijun=0;
+--
+-- ●kijun（繰り返しの基準）
+--　　　0：Ｚ軸プラス方向に繰り返す
+--　　　1：原点を基準とし、プラスマイナス両方向に繰り返す
+--　　　2：Ｚ軸マイナス方向に繰り返す
+--
+rep=math.floor(obj.track0)
+space=obj.track1
+spin=obj.track2
+rot=obj.track3
+--[[
+「3Dリピート(描画)」単体でも使えるようにすることを目指して、
+未定義変数がある場合はここでデフォルト値にするっていうやり方で初期化してみたが
+他で同じ変数を使っている場合は定義自体は存在するので、
+それを使おうとして不安定になってしまうので、この方式はやめた。
+相対座標設定のアニメーションを「3Dリピート基本設定」として適用必須とし、そこで初期化する。
+まああっても困らないはずなので一応残しておく。
+]]
+if(shiftX==nil) then shiftX=0 end
+if(shiftY==nil) then shiftY=0 end
+if(shiftZ==nil) then shiftZ=0 end
+if(shiftRx==nil) then shiftRx=0 end
+if(shiftRy==nil) then shiftRy=0 end
+if(shiftRz==nil) then shiftRz=0 end
+if(shiftZoom==nil) then shiftZoom=0 end
+if(baseAlpha==nil) then baseAlpha=1 end
+if(shiftAlpha==nil) then shiftAlpha=0 end
+--
+-- 変数数値統合
+diffZ = space + shiftZ
+diffRz = spin + shiftRz
+--
+baseX=0
+baseY=0
+baseZ=0
+baseRx=0
+baseRy=0
+baseRz=rot
+baseZoom=1.0
+if(kijun==1) then -- 原点を基準としてプラスマイナス両方向に繰り返す場合
+  baseX = 0.5*(rep-1)*shiftX
+  baseY = 0.5*(rep-1)*shiftY
+  baseZ = 0.5*(rep-1)*diffZ
+  baseRx = 0.5*(rep-1)*shiftRx
+  baseRy = 0.5*(rep-1)*shiftRy
+  baseRz = rot+0.5*(rep-1)*diffRz
+  baseZoom = baseZoom+0.5*(rep-1)*shiftZoom
+  baseAlpha = baseAlpha+0.5*(rep-1)*shiftAlpha
+  shiftX=-shiftX
+  shiftY=-shiftY
+  diffZ=-diffZ
+  shiftRx=-shiftRx
+  shiftRy=-shiftRy
+  diffRz=-diffRz
+  shiftZoom=-shiftZoom
+  shiftAlpha=-shiftAlpha
+elseif(kijun==2) then -- Ｚ軸マイナス方向に繰り返す場合
+  shiftX=-shiftX
+  shiftY=-shiftY
+  diffZ=-diffZ
+  shiftRx=-shiftRx
+  shiftRy=-shiftRy
+  diffRz=-diffRz
+  shiftZoom=-shiftZoom
+  shiftAlpha=-shiftAlpha
+end
+-- 一度も描画されない場合元のオブジェクトが見えてしまうので
+-- 見えるべきでない場合はオブジェクトを完全透明にする。
+if(rep==0) then -- 繰り返し数が０の場合
+  obj.alpha=0
+end
+if( (kijun==0) and ((baseAlpha==0) and (shiftAlpha<=0)) ) then
+  -- kijunが0(Zプラス方向に増える)で、baseAlphaが0、shiftAlphaが0未満の場合
+  obj.alpha=0
+end
+if( (kijun==1) and ((baseAlpha==0) and (shiftAlpha==0)) ) then
+  -- kijunが0(Z両方向に増える)で、baseAlphaが0、shiftAlphaが0の場合
+  obj.alpha=0
+end
+if( (kijun==2) and ((baseAlpha==0) and (shiftAlpha<=0)) ) then
+  -- kijunが2(Zマイナス方向に増える)で、baseAlphaが0、shiftAlphaが0以上の場合
+  -- ※kijunが2の場合、shiftAlphaは上の処理で「指定した数値に-1をかけたもの」になっているので
+  -- 　 条件判定はshiftAlpha<=0でよい。
+  obj.alpha=0
+end
+-- 描画開始
+for i=0,rep-1 do
+  alpha=baseAlpha+shiftAlpha*i
+  if(alpha>1) then alpha=1 end
+  if(alpha>0) then -- 完全に透明になった要素は描画しないようにする
+      obj.draw(baseX+shiftX*i, baseY+shiftY*i, baseZ+diffZ*i, baseZoom+shiftZoom*i, alpha, baseRx+shiftRx*i, baseRy+shiftRy*i, baseRz+diffRz*i)
+  end
+end
