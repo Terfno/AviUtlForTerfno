@@ -1,0 +1,236 @@
+[debug]: Init():イベント "AUOSETUP_EVENT_ABORT_7680"を監視開始
+[info ]: Aviutlフォルダ: "E:\aviutl100" にインストールします...
+[debug]: searchFileExceptInstallDir():[1]
+[debug]: E:\aviutl100\x264guiEx.auo
+[debug]: Init():auoSetup設定
+[debug]: auoSetup build     Sep  9 2017 07:43:00
+[debug]: OS Version:        Windows 10 x64 (0)
+[debug]: current dir:       E:\aviutl100\setup\setup
+[debug]: clr ver (build):   v4.0.30319
+[debug]: clr ver (runtime): v4.0.30319
+[debug]: 
+[debug]: auoSetup:          E:\aviutl100\setup\setup\auoSetup.exe
+[debug]: installName:       x264guiEx.auo
+[debug]: AviutlDir:         E:\aviutl100
+[debug]: bAviutlExists:     True
+[debug]: PluginsDir:        E:\aviutl100
+[debug]: DownloadTmpDir:    E:\aviutl100\setup\setup
+[debug]: bUpdateOverwrite:  False
+[debug]: bInstallX264:      True
+[debug]: nInstallX265:      0
+[debug]: bInstallNero:      False
+[debug]: bInstallQaac:      True
+[debug]: _appledll:         False
+[debug]: bInstallLsmash:    True
+[debug]: bInstallStg:       False
+[debug]: nInstallIni:       0
+[debug]: bInstallAuo:       False
+[debug]: autoRun:           True
+[debug]: autoUpdateIni:     False
+[debug]: autoUpdateStg:     False
+[debug]: updateOverwrite:   False
+[debug]: 
+[debug]: auoSetup Dir [E:\aviutl100\setup\setup]
+[debug]:   E:\aviutl100\setup\setup\auoSetup.exe
+[debug]:   E:\aviutl100\setup\setup\auoSetup_log_console_x264guiEx_2018.01.21.203037.txt
+[debug]: 
+[debug]: AviutlDir [E:\aviutl100]
+[debug]:   E:\aviutl100\aviutl.exe
+[debug]:   E:\aviutl100\aviutl.txt
+[debug]:   E:\aviutl100\aviutl.vfp
+[debug]:   E:\aviutl100\aviutl.ini
+[debug]:   E:\aviutl100\デフォルト.cfg
+[debug]:   E:\aviutl100\aviutl.sav
+[debug]:   E:\aviutl100\lua51.dll
+[debug]:   E:\aviutl100\exedit.anm
+[debug]:   E:\aviutl100\exedit.auf
+[debug]:   E:\aviutl100\exedit.aui
+[debug]:   E:\aviutl100\exedit.auo
+[debug]:   E:\aviutl100\exedit.cam
+[debug]:   E:\aviutl100\exedit.ini
+[debug]:   E:\aviutl100\exedit.obj
+[debug]:   E:\aviutl100\exedit.scn
+[debug]:   E:\aviutl100\exedit.tra
+[debug]:   E:\aviutl100\exedit.txt
+[debug]:   E:\aviutl100\lua.txt
+[debug]:   E:\aviutl100\lwmuxer.auf
+[debug]:   E:\aviutl100\Readme.txt
+[debug]:   E:\aviutl100\changelog.txt
+[debug]:   E:\aviutl100\decoder_name.txt
+[debug]:   E:\aviutl100\lwcolor.auc
+[debug]:   E:\aviutl100\lwdumper.auf
+[debug]:   E:\aviutl100\lwinput.aui
+[debug]:   E:\aviutl100\aviutl.aup
+[debug]:   E:\aviutl100\x264guiEx.auo
+[debug]:   E:\aviutl100\x264guiEx.ini
+[debug]:   E:\aviutl100\x264guiEx.conf
+[debug]:   E:\aviutl100\folder\exedit92.zip
+[debug]:   E:\aviutl100\folder\aviutl100.zip
+[debug]:   E:\aviutl100\folder\L-SMASH_Works_r921_plugins.zip
+[debug]:   E:\aviutl100\AviSynth\LSMASHSource.dll
+[debug]:   E:\aviutl100\AviSynth\Readme.txt
+[debug]:   E:\aviutl100\AviSynth\x64\LSMASHSource.dll
+[debug]:   E:\aviutl100\license\FFmpeg\COPYING.LGPLv3
+[debug]:   E:\aviutl100\license\Game_Music_Emu\license.txt
+[debug]:   E:\aviutl100\license\Intel Media SDK\Media_SDK_EULA.rtf
+[debug]:   E:\aviutl100\license\L-SMASH\LICENSE
+[debug]:   E:\aviutl100\license\L-SMASH_Works\AviSynth\LICENSE
+[debug]:   E:\aviutl100\license\L-SMASH_Works\AviUtl\LICENSE
+[debug]:   E:\aviutl100\license\L-SMASH_Works\VapourSynth\LICENSE
+[debug]:   E:\aviutl100\license\OpenCORE_AMR\COPYING
+[debug]:   E:\aviutl100\license\Opus\COPYING
+[debug]:   E:\aviutl100\license\zlib\README
+[debug]:   E:\aviutl100\readme\AviSynth\README
+[debug]:   E:\aviutl100\readme\AviUtl\README
+[debug]:   E:\aviutl100\readme\AviUtl\README.ja
+[debug]:   E:\aviutl100\readme\VapourSynth\README
+[debug]:   E:\aviutl100\VapourSynth\vslsmashsource.dll
+[debug]:   E:\aviutl100\backup\2018-01-21_18-36-37.exedit_backup
+[debug]:   E:\aviutl100\backup\2018-01-21_18-44-54.exedit_backup
+[debug]:   E:\aviutl100\exe_files\x264_2851_x64.exe
+[debug]:   E:\aviutl100\exe_files\qaac.exe
+[debug]:   E:\aviutl100\exe_files\refalac.exe
+[debug]:   E:\aviutl100\exe_files\libsoxconvolver.dll
+[debug]:   E:\aviutl100\exe_files\libsoxr.dll
+[debug]:   E:\aviutl100\exe_files\ASL.dll
+[debug]:   E:\aviutl100\exe_files\CoreAudioToolbox.dll
+[debug]:   E:\aviutl100\exe_files\CoreFoundation.dll
+[debug]:   E:\aviutl100\exe_files\icudt55.dll
+[debug]:   E:\aviutl100\exe_files\libdispatch.dll
+[debug]:   E:\aviutl100\exe_files\libicuin.dll
+[debug]:   E:\aviutl100\exe_files\libicuuc.dll
+[debug]:   E:\aviutl100\exe_files\msvcp100.dll
+[debug]:   E:\aviutl100\exe_files\msvcr100.dll
+[debug]:   E:\aviutl100\exe_files\objc.dll
+[debug]:   E:\aviutl100\exe_files\boxdumper.exe
+[debug]:   E:\aviutl100\exe_files\muxer.exe
+[debug]:   E:\aviutl100\exe_files\remuxer.exe
+[debug]:   E:\aviutl100\exe_files\timelineeditor.exe
+[debug]:   E:\aviutl100\x264guiEx_stg\PS3.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\PSP.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\twitter.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\Xbox 360.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\youtube.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\アニメ (高圧縮).stg
+[debug]:   E:\aviutl100\x264guiEx_stg\アニメ (高画質).stg
+[debug]:   E:\aviutl100\x264guiEx_stg\バランス.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\高画質.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\高速.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\Bluray\Bluray (tff).stg
+[debug]:   E:\aviutl100\x264guiEx_stg\Bluray\Bluray.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\iPhone iPod iPad\iPhone3G, iPodtouch2-3.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\iPhone iPod iPad\iPhone4, iPad, iPodtouch4.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\iPhone iPod iPad\iPhone4S, iPad2.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\ニコ動\ニコ動  15分未満 (プレミアムのみ).stg
+[debug]:   E:\aviutl100\x264guiEx_stg\ニコ動\ニコ動  30分未満.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\ニコ動\ニコ動 30分～60分.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\ニコ動\ニコ動 60分以上.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\ニコ動\ニコ動 静止画  15分未満.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\ニコ動\ニコ動 静止画 15分～30分.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\ニコ動\ニコ動 静止画 30分～60分.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\ニコ動\ニコ動 静止画 60分以上.stg
+[debug]:   E:\aviutl100\x264guiEx_stg\ニコ動\ニコ動 音質重視.stg
+[debug]:   E:\aviutl100\setup\setup\auoSetup.exe
+[debug]:   E:\aviutl100\setup\setup\auoSetup_log_console_x264guiEx_2018.01.21.203037.txt
+[debug]: 
+[debug]: ex_stg
+[debug]:   s_x264.fullpath:                [file exists: yes]: E:\aviutl100\exe_files\x264_2851_x64.exe
+[debug]:   s_x264.fullpath_highbit:        [file exists: no ]: E:\aviutl100\
+[debug]:   s_aud[QAAC_IDX].fullpath:       [file exists: yes]: E:\aviutl100\exe_files\qaac.exe
+[debug]:   s_aud[REFALAC_IDX].fullpath:    [file exists: yes]: E:\aviutl100\exe_files\refalac.exe
+[debug]:   s_mux[MUXER_MP4].fullpath:      [file exists: yes]: E:\aviutl100\exe_files\remuxer.exe
+[debug]:   s_mux[MUXER_MP4_RAW].fullpath:  [file exists: yes]: E:\aviutl100\exe_files\muxer.exe
+[debug]:   s_mux[MUXER_TC2MP4].fullpath:   [file exists: yes]: E:\aviutl100\exe_files\timelineeditor.exe
+[debug]: Init():qtmode: QAAC_APPLEDLL_IN_EXEDIR
+[debug]: x264::init():
+[debug]:   aviutlDir:        E:\aviutl100
+[debug]:   pluginsDir:       E:\aviutl100
+[debug]:   downloadTmpDir:   E:\aviutl100\setup\setup
+[debug]:   bAviutlExists:    True
+[debug]:   bUpdateOverwrite: False
+[debug]: Init():installer->init() [x264]
+[debug]: x264 10bit::init():
+[debug]:   aviutlDir:        E:\aviutl100
+[debug]:   pluginsDir:       E:\aviutl100
+[debug]:   downloadTmpDir:   E:\aviutl100\setup\setup
+[debug]:   bAviutlExists:    True
+[debug]:   bUpdateOverwrite: False
+[debug]: Init():installer->init() [x264 10bit]
+[debug]: qaac::init():
+[debug]:   aviutlDir:        E:\aviutl100
+[debug]:   pluginsDir:       E:\aviutl100
+[debug]:   downloadTmpDir:   E:\aviutl100\setup\setup
+[debug]:   bAviutlExists:    True
+[debug]:   bUpdateOverwrite: False
+[debug]: Init():installer->init() [qaac]
+[debug]: l-smash::init():
+[debug]:   aviutlDir:        E:\aviutl100
+[debug]:   pluginsDir:       E:\aviutl100
+[debug]:   downloadTmpDir:   E:\aviutl100\setup\setup
+[debug]:   bAviutlExists:    True
+[debug]:   bUpdateOverwrite: False
+[debug]: Init():installer->init() [l-smash]
+[debug]: x264::check_only_all():
+[debug]: x264::check_set_param():
+[debug]: x264::check_set_param():currentFileFullPath: E:\aviutl100\exe_files\x264_2851_x64.exe
+[debug]: x264::check_set_param():latestCheckUrlList[1](id = 0, urlIdMapping = 1): https://onedrive.live.com/download?resid=6BDD4375AC8933C6!4484&authkey=!ABJHFkrCepS7euQ&ithint=file%2ctxt
+[debug]: x264::check_set_param():latestCheckUrlList[2](id = 1, urlIdMapping = 2): https://www.dropbox.com/s/430qrgxyiit3s0h/latest_build.txt?dl=1
+[debug]: x264::check_set_param():latestCheckUrlList[3](id = 2, urlIdMapping = 3): https://drive.google.com/uc?export=download&id=0BzA4dIFteM2dWUp0OE10ZXpYREU
+[debug]: x264::check_set_param():nInstall = True
+[debug]: x264::check():urlId: 0
+[debug]: x264::getMesBaseUrl():url[0]:https://onedrive.live.com/download?resid=6BDD4375AC8933C6!4484&authkey=!ABJHFkrCepS7euQ&ithint=file%2ctxt
+[debug]: x264::getMesBaseUrl():downloader.download(): status: RES_FIN
+[debug]: x264::getUrlVer():urlId: 0, urlText: 2901
+[info ]: x264のダウンロードリンクを取得完了
+[debug]: x264::getUrlVer():latestDownloadUrl: https://onedrive.live.com/download?resid=6BDD4375AC8933C6!4486&authkey=!AI0ggzXuP4DGYSQ&ithint=file%2czip
+[debug]: x264::getMesBaseUrl():getUrlVer(urlId = 0): latestVer: r2901
+[debug]: x264::check():bAviutlExists
+[debug]: x264::check_update():currentFileFullPath: "E:\aviutl100\exe_files\x264_2851_x64.exe"
+[debug]: x264::getExeVer():
+[debug]: x264::getExeVer():currentFileFullPath = E:\aviutl100\exe_files\x264_2851_x64.exe exists.
+[debug]: x264::getExeVer():get_exe_version_from_cmd(): success: rev 2851
+[info ]: x264を更新します。 r2851 → r2901
+[debug]: check():installer->check_only_all() [x264]: OK
+[debug]: x264 10bit::check_only_all():
+[debug]: x264 10bit::check_set_param():
+[debug]: x264 10bit::check_set_param():currentFileFullPath: E:\aviutl100\exe_files\x264_2851_x64.exe
+[debug]: x264 10bit::check_set_param():nInstall = False
+[debug]: x264 10bit::check_only_all():ダウンロードは必要ありません。
+[debug]: check():installer->check_only_all() [x264 10bit]: OK
+[debug]: qaac::check_only_all():
+[debug]: qaac::check_set_param():
+[debug]: qaac::check():urlId: 0
+[debug]: qaac::getMesBaseUrl():url[0]:https://sites.google.com/site/qaacpage/cabinet/
+[debug]: qaac::getMesBaseUrl():downloader.download(): status: RES_FIN
+[debug]: qaac::getUrlVer():findUrl: https://sites.google.com/site/qaacpage/cabinet/qaac_%{rev}.zip?attredirects=0&amp;d=1
+[debug]: qaac::getUrlVer():baseUrl: https://sites.google.com/site/qaacpage/cabinet/
+[debug]: qaac::getUrlVer():revString: 2.64
+[debug]: qaac::getUrlVer():revArray: 2.64
+[debug]: qaac::getMesBaseUrl():getUrlVer(urlId = 0): latestVer: 2.64
+[debug]: qaac::check():bAviutlExists
+[debug]: qaac::check_update():currentFileFullPath: "E:\aviutl100\exe_files\qaac.exe"
+[debug]: qaac::getExeVer():currentFileFullPath = E:\aviutl100\exe_files\qaac.exe exists.
+[debug]: qaac::getExeVer():get_exe_version_from_cmd(): success.
+[info ]: qaacの更新は必要ありません。 2.64
+[debug]: check():installer->check_only_all() [qaac]: OK
+[debug]: l-smash::check_only_all():
+[debug]: l-smash::check_set_param():
+[debug]: l-smash::check_set_param():currentFileFullPath: E:\aviutl100\exe_files\remuxer.exe
+[debug]: l-smash::check_set_param():latestCheckUrlList[1](id = 0): https://onedrive.live.com/download?resid=6BDD4375AC8933C6!4437&authkey=!AMidqXDZOeJtv4g&ithint=file%2ctxt
+[debug]: l-smash::check_set_param():latestCheckUrlList[2](id = 1): https://www.dropbox.com/s/f7knxwnjvispv7i/latest_build.txt?dl=1
+[debug]: l-smash::check_set_param():latestCheckUrlList[3](id = 2): https://drive.google.com/uc?export=download&id=0BzA4dIFteM2dVHJDRk9rSlE1X0E
+[debug]: l-smash::check():urlId: 0
+[debug]: l-smash::getMesBaseUrl():url[0]:https://onedrive.live.com/download?resid=6BDD4375AC8933C6!4437&authkey=!AMidqXDZOeJtv4g&ithint=file%2ctxt
+[debug]: l-smash::getMesBaseUrl():downloader.download(): status: RES_FIN
+[debug]: l-smash::getUrlVer():urlId: 0, urlText: 1453 
+[debug]: l-smash::getUrlVer():latestDownloadUrl: https://onedrive.live.com/download?resid=6BDD4375AC8933C6!4438&authkey=!AGhkFjNWPSo1VDY&ithint=file%2czip
+[debug]: l-smash::getMesBaseUrl():getUrlVer(urlId = 0): latestVer: r1453
+[debug]: l-smash::check():bAviutlExists
+[debug]: l-smash::check_update():currentFileFullPath: "E:\aviutl100\exe_files\remuxer.exe"
+[debug]: l-smash::getExeVer():
+[debug]: l-smash::getExeVer():currentFileFullPath = E:\aviutl100\exe_files\remuxer.exe exists.
+[debug]: l-smash::getExeVer():get_exe_version_from_cmd(): success.
+[info ]: l-smashの更新は必要ありません。 r1453
+[debug]: check():installer->check_only_all() [l-smash]: OK
+[debug]: check():installer->check_only_all() [overall]: OK
+[debug]: abortRequired():no

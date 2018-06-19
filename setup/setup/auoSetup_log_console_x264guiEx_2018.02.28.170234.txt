@@ -1,0 +1,315 @@
+[debug]: Init():イベント "AUOSETUP_EVENT_ABORT_11268"を監視開始
+[info ]: Aviutlフォルダ: "C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100" にインストールします...
+[debug]: searchFileExceptInstallDir():[1]
+[debug]: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx.auo
+[debug]: Init():auoSetup設定
+[debug]: auoSetup build     Sep  9 2017 07:43:00
+[debug]: OS Version:        Windows 10 x64 (0)
+[debug]: current dir:       C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup
+[debug]: clr ver (build):   v4.0.30319
+[debug]: clr ver (runtime): v4.0.30319
+[debug]: 
+[debug]: auoSetup:          C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup\auoSetup.exe
+[debug]: installName:       x264guiEx.auo
+[debug]: AviutlDir:         C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100
+[debug]: bAviutlExists:     True
+[debug]: PluginsDir:        C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100
+[debug]: DownloadTmpDir:    C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup
+[debug]: bUpdateOverwrite:  False
+[debug]: bInstallX264:      True
+[debug]: nInstallX265:      0
+[debug]: bInstallNero:      False
+[debug]: bInstallQaac:      True
+[debug]: _appledll:         False
+[debug]: bInstallLsmash:    True
+[debug]: bInstallStg:       False
+[debug]: nInstallIni:       0
+[debug]: bInstallAuo:       False
+[debug]: autoRun:           True
+[debug]: autoUpdateIni:     False
+[debug]: autoUpdateStg:     False
+[debug]: updateOverwrite:   False
+[debug]: 
+[debug]: auoSetup Dir [C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup]
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup\auoSetup.exe
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup\auoSetup_log_console_x264guiEx_2018.01.21.203037.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup\auoSetup_log_console_x264guiEx_2018.02.28.170234.txt
+[debug]: 
+[debug]: AviutlDir [C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100]
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\aviutl.exe
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\aviutl.ini
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\aviutl.sav
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\aviutl.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\aviutl.vfp
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\batch0.aup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\changelog.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\decoder_name.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exedit.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exedit.auf
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exedit.aui
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exedit.auo
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exedit.cam
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exedit.ini
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exedit.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exedit.scn
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exedit.tra
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exedit.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\hoge.exa
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\lua.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\lua51.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\lwcolor.auc
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\lwdumper.auf
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\lwinput.aui
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\lwmuxer.auf
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\Readme.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx.auo
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx.conf
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx.ini
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\デフォルト.cfg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\デフォルト.sav
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\AviSynth\LSMASHSource.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\AviSynth\Readme.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\AviSynth\x64\LSMASHSource.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\backup\2018-01-28_16-16-16.exedit_backup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\backup\2018-01-28_16-17-16.exedit_backup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\backup\2018-02-12_13-53-16.exedit_backup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\backup\2018-02-12_18-16-37.exedit_backup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\backup\2018-02-12_18-19-56.exedit_backup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\backup\2018-02-12_19-03-56.exedit_backup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\backup\2018-02-28_16-30-37.exedit_backup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\backup\2018-02-28_16-36-18.exedit_backup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\backup\2018-02-28_16-41-18.exedit_backup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\backup\2018-02-28_16-43-58.exedit_backup
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\ASL.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\boxdumper.exe
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\CoreAudioToolbox.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\CoreFoundation.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\icudt55.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\libdispatch.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\libicuin.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\libicuuc.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\libsoxconvolver.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\libsoxr.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\msvcp100.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\msvcr100.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\muxer.exe
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\objc.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\qaac.exe
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\refalac.exe
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\remuxer.exe
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\timelineeditor.exe
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\x264_2851_x64.exe
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\folder\aviutl100.zip
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\folder\exedit92.zip
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\folder\L-SMASH_Works_r921_plugins.zip
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\folder\script_20160828.zip
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\folder\x264guiEx_2.55.zip
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\license\FFmpeg\COPYING.LGPLv3
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\license\Game_Music_Emu\license.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\license\Intel Media SDK\Media_SDK_EULA.rtf
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\license\L-SMASH\LICENSE
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\license\L-SMASH_Works\AviSynth\LICENSE
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\license\L-SMASH_Works\AviUtl\LICENSE
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\license\L-SMASH_Works\VapourSynth\LICENSE
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\license\OpenCORE_AMR\COPYING
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\license\Opus\COPYING
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\license\zlib\README
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\readme\AviSynth\README
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\readme\AviUtl\README
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\readme\AviUtl\README.ja
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\readme\VapourSynth\README
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\@ANM1.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\@ANM2.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\@FIGURE.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\@LOAD.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\@TA.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\@加減速.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\@連番.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\@音声.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\2値化ノイズ.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\@加減速TRA.tra
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\@範囲指定で変化.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\しきい値ランダム移動.tra
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\ふらふら.tra
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\カクカク.tra
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\タータンチェック_ISTN.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\ホログラム.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\ランダムラインEX.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\ランダム軌道.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\ランダム軌道_方向.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\三角クリッピング.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\三角括弧.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\円矢印.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\分度器.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\千鳥格子.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\可変速度動画読込.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\回転万華鏡.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\多角形_震える.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\斜め三角クリッピング.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\日の出.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\矢がすり.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\簡易変形マスク.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\紙飛行機.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\裏面塗りつぶし.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\透過判定図形並べ.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\連番画像読込_改変.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\集中線plus.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\震える_連動.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\ANM_ssd\麻の葉模様.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\@TAテキスト配置.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TAぽよよーんと登場.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TA位置調整で移動.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TA回転停止で登場.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TA字間XY.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TA操作SP.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TA数珠つなぎ.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TA標準登場2.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TA標準移動.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TA移動軌跡.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TA範囲指定で変化.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\TA_ssd\TA起き上がって登場.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\削除済み\@削除済みANM.anm
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\script\削除済み\@削除済みFIG.obj
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup\auoSetup.exe
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup\auoSetup_log_console_x264guiEx_2018.01.21.203037.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup\auoSetup_log_console_x264guiEx_2018.02.28.170234.txt
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\VapourSynth\vslsmashsource.dll
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\PS3.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\PSP.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\twitter.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\Xbox 360.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\youtube.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\アニメ (高圧縮).stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\アニメ (高画質).stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\バランス.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\高画質.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\高速.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\Bluray\Bluray (tff).stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\Bluray\Bluray.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\iPhone iPod iPad\iPhone3G, iPodtouch2-3.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\iPhone iPod iPad\iPhone4, iPad, iPodtouch4.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\iPhone iPod iPad\iPhone4S, iPad2.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\ニコ動\ニコ動  15分未満 (プレミアムのみ).stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\ニコ動\ニコ動  30分未満.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\ニコ動\ニコ動 30分～60分.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\ニコ動\ニコ動 60分以上.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\ニコ動\ニコ動 静止画  15分未満.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\ニコ動\ニコ動 静止画 15分～30分.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\ニコ動\ニコ動 静止画 30分～60分.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\ニコ動\ニコ動 静止画 60分以上.stg
+[debug]:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\x264guiEx_stg\ニコ動\ニコ動 音質重視.stg
+[debug]: 
+[debug]: ex_stg
+[debug]:   s_x264.fullpath:                [file exists: yes]: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\x264_2851_x64.exe
+[debug]:   s_x264.fullpath_highbit:        [file exists: no ]: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\
+[debug]:   s_aud[QAAC_IDX].fullpath:       [file exists: yes]: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\qaac.exe
+[debug]:   s_aud[REFALAC_IDX].fullpath:    [file exists: yes]: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\refalac.exe
+[debug]:   s_mux[MUXER_MP4].fullpath:      [file exists: yes]: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\remuxer.exe
+[debug]:   s_mux[MUXER_MP4_RAW].fullpath:  [file exists: yes]: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\muxer.exe
+[debug]:   s_mux[MUXER_TC2MP4].fullpath:   [file exists: yes]: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\timelineeditor.exe
+[debug]: Init():qtmode: QAAC_APPLEDLL_IN_EXEDIR
+[debug]: x264::init():
+[debug]:   aviutlDir:        C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100
+[debug]:   pluginsDir:       C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100
+[debug]:   downloadTmpDir:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup
+[debug]:   bAviutlExists:    True
+[debug]:   bUpdateOverwrite: False
+[debug]: Init():installer->init() [x264]
+[debug]: x264 10bit::init():
+[debug]:   aviutlDir:        C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100
+[debug]:   pluginsDir:       C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100
+[debug]:   downloadTmpDir:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup
+[debug]:   bAviutlExists:    True
+[debug]:   bUpdateOverwrite: False
+[debug]: Init():installer->init() [x264 10bit]
+[debug]: qaac::init():
+[debug]:   aviutlDir:        C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100
+[debug]:   pluginsDir:       C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100
+[debug]:   downloadTmpDir:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup
+[debug]:   bAviutlExists:    True
+[debug]:   bUpdateOverwrite: False
+[debug]: Init():installer->init() [qaac]
+[debug]: l-smash::init():
+[debug]:   aviutlDir:        C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100
+[debug]:   pluginsDir:       C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100
+[debug]:   downloadTmpDir:   C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\setup\setup
+[debug]:   bAviutlExists:    True
+[debug]:   bUpdateOverwrite: False
+[debug]: Init():installer->init() [l-smash]
+[debug]: x264::check_only_all():
+[debug]: x264::check_set_param():
+[debug]: x264::check_set_param():currentFileFullPath: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\x264_2851_x64.exe
+[debug]: x264::check_set_param():latestCheckUrlList[1](id = 0, urlIdMapping = 1): https://onedrive.live.com/download?resid=6BDD4375AC8933C6!4484&authkey=!ABJHFkrCepS7euQ&ithint=file%2ctxt
+[debug]: x264::check_set_param():latestCheckUrlList[2](id = 1, urlIdMapping = 2): https://www.dropbox.com/s/430qrgxyiit3s0h/latest_build.txt?dl=1
+[debug]: x264::check_set_param():latestCheckUrlList[3](id = 2, urlIdMapping = 3): https://drive.google.com/uc?export=download&id=0BzA4dIFteM2dWUp0OE10ZXpYREU
+[debug]: x264::check_set_param():nInstall = True
+[debug]: x264::check():urlId: 0
+[debug]: x264::getMesBaseUrl():url[0]:https://onedrive.live.com/download?resid=6BDD4375AC8933C6!4484&authkey=!ABJHFkrCepS7euQ&ithint=file%2ctxt
+[debug]: x264::getMesBaseUrl():downloader.download(): status: RES_FIN
+[debug]: x264::getUrlVer():urlId: 0, urlText: <!DOCTYPE html><!-- ServerInfo: BL2IDSLGN1J010 2018.02.14.19.26.36 Live1 Unknown LocVer:0 --><!-- PreprocessInfo: azbldrun:CY1AZRBLD99, 2018-02-15T03:13:29.7833963Z - Version: 16,0,27701,0 --><!-- RequestLCID: 1033, Market:EN-US, PrefCountry: US, LangLCID: 1033, LangISO: EN --><html dir="ltr" lang="EN-US"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><base href="https://login.live.com/pp1600/"/><script type="text/javascript">var PROOF = {};PROOF.Type = {SQSA: 6, CSS: 5, DeviceId: 4, Email: 1, AltEmail: 2, SMS: 3, HIP: 8, Birthday: 9, TOTPAuthenticator: 10, RecoveryCode: 11, StrongTicket: 13, TOTPAuthenticatorV2: 14, UniversalSecondFactor: 15, Voice: -3};</script><noscript><meta http-equiv="Refresh" content="0; URL=https://login.live.com/jsDisabled.srf?mkt=EN-US&lc=1033"/>Microsoft account requires JavaScript to sign in. This web browser either does not support JavaScript, or scripts are being blocked.<br /><br />To find out whether your browser supports JavaScript, or to allow scripts, see the browser's online help.</noscript><title>OneDrive</title><meta name="description" content="Sign in to your OneDrive cloud storage and Office Online."/><meta name="PageID" content="i5030"/><meta name="SiteID" content="250206"/><meta name="ReqLC" content="1033"/><meta name="LocLC" content="1033"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/><link rel="shortcut icon" href="https://auth.gfx.ms/16.000.27701.00/images/favicon.ico" /><link rel="stylesheet" title="Converged" type="text/css" href="https://auth.gfx.ms/16.000.27701.00/Converged1033.css"/><style type="text/css">body.cb input.hip{border-width: 2px !important;}</style><style type="text/css">body{display:none;}</style><script type="text/javascript">if (top != self){try{top.location.replace(self.location.href);}catch (e){}}else{document.write(unescape('%3C%73') + 'tyle type="text/css">body{display:block !important;}</style>');}</script><noscript><style type="text/css">body{display:block !important;}</style></noscript><script type="text/javascript">!function(e,r){for(var t in r)e[t]=r[t]}(this,function(e){function r(n){if(t[n])return t[n].exports;var s=t[n]={exports:{},id:n,loaded:!1};return e[n].call(s.exports,s,s.exports,r),s.loaded=!0,s.exports}var t={};return r.m=e,r.c=t,r.p="",r(0)}([function(e,r){var t=window,n=t.navigator;t.g_iSRSFailed=0,t.g_sSRSSuccess="",r.SRSRetry=function(e,r,s,i){var a=1,c=unescape("%3Cscript type='text/javascript' src='"),o=unescape("'%3E%3C/script%3E"),u=r;if(n&&n.userAgent&&i&&i!==r){var S=n.userAgent.toLowerCase(),d=S.indexOf("edge")>=0;if(!d){var p=S.match(/chrome\/([0-9]+)\./),f=p&&2===p.length&&!isNaN(p[1])&&parseInt(p[1])>54;f&&(u=i)}}t.g_sSRSSuccess.indexOf(e)===-1&&("undefined"==typeof t[e]?(t.g_iSRSFailed=1,s<=a&&document.write(c+u+o)):t.g_sSRSSuccess+=e+"|"+s+",")}}]));var g_dtFirstByte=new Date();var g_objPageMode = null;</script><link rel="image_src" href="https://auth.gfx.ms/16.000.27701.00/images/Windows_Live_v_thumb.jpg" /><script type="text/javascript">var ServerData = {Bh:10000,Bm:{},aA:'',Bp:{},aE:'https://auth.gfx.ms/16.000.27701.00/',Bs:'',aG:2,Bt:'',aH:true,aI:true,aJ:false,aK:false,Bx:'16.0.27701.0',By:'',Bz:'',aP:false,aQ:false,urlLogin:'https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1519804976&rver=6.7.6643.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fonedrive.live.com%2Fdownload%3Fresid%3D6BDD4375AC8933C6!4484%26authkey%3D!ABJHFkrCepS7euQ%26ithint%3Dfile%252ctxt&id=250206&cbcxt=sky&cbcxt=sky&contextid=61679FA37493BD98&bk=1519804978&mkt=EN-US&lc=1033',aT:true,aU:true,aV:true,hpgid:33,aW:true,aY:false,urlFed:'',bA:"A single-use code lets you sign in without entering your password. This helps protect your account when you\'re using someone else\'s PC. <a href=\"http://explore.live.com/windows-live-sign-in-single-use-code-faq\" id=\"idPaneHelpOTCInfoLink9\" target=\"_blank\">Learn more</a>",bB:"Your session has timed out. To request a single use code, please <a href=\"javascript:NewOTCRequest()\">refresh the page</a>.",ad:'https://account.live.com/query.aspx?uaid=e4dc8ba75965490d94f89e704a8e4557&mkt=EN-US&lc=1033&id=250206',ae:'',bD:'e4dc8ba75965490d94f89e704a8e4557',bF:'',ag:2,ah:true,bG:'',sPOST_NewUser:'',ai:false,bH:'',bI:'',aj:true,bJ:'https://onedrive.live.com/preload?view=Folders.All&id=250206&mkt=EN-US',ak:false,al:false,am:false,bL:'',an:false,bM:'https://login.live.com/gls.srf?urlID=MSNPrivacyStatement&mkt=EN-US&vv=1600',urlPost:'https://login.live.com/ppsecure/post.srf?wa=wsignin1.0&rpsnv=13&ct=1519804976&rver=6.7.6643.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fonedrive.live.com%2Fdownload%3Fresid%3D6BDD4375AC8933C6!4484%26authkey%3D!ABJHFkrCepS7euQ%26ithint%3Dfile%252ctxt&lc=1033&id=250206&cbcxt=sky&cbcxt=sky&contextid=61679FA37493BD98&bk=1519804978&uaid=e4dc8ba75965490d94f89e704a8e4557&pid=0',at:false,au:false,bT:'',av:true,bU:'',ax:false,ay:false,az:true,fWebNgcFS:false,C:'',sFedQS:'wa=wsignin1.0&wtrealm=uri:WindowsLiveID&wctx=wa%3Dwsignin1.0%26rpsnv%3D13%26ct%3D1519804976%26rver%3D6.7.6643.0%26wp%3DMBI_SSL_SHARED%26wreply%3Dhttps:%252F%252Fonedrive.live.com%252Fdownload%253Fresid%253D6BDD4375AC8933C6!4484%2526authkey%253D!ABJHFkrCepS7euQ%2526ithint%253Dfile%25252ctxt%26lc%3D1033%26id%3D250206%26cbcxt%3Dsky%26cbcxt%3Dsky%26contextid%3D61679FA37493BD98%26bk%3D1519804978',bb:"Use the primary phone number you\'ve associated with your Microsoft account. <a href=\"http://explore.live.com/windows-live-sign-in-single-use-code-faq\" id=\"idPaneHelpOTCInfoLink9\" target=\"_blank\">Learn more</a>",bc:"Sign in",J:'https://login.live.com/cookiesDisabled.srf?mkt=EN-US&lc=1033',N:1,bh:'https://sc.imp.live.com/content/dam/imp/surfaces/mail_signin/v3/sky/EN-US.html?id=250206&mkt=EN-US&cbcxt=sky',bi:'',bj:'https://p.sfx.ms/login/v1/header.html?id=250206&mkt=EN-US&cbcxt=sky',Q:false,str:[],bk:'',A8:'',S:'https://login.live.com/GetSessionState.srf?wa=wsignin1.0&rpsnv=13&ct=1519804976&rver=6.7.6643.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fonedrive.live.com%2Fdownload%3Fresid%3D6BDD4375AC8933C6!4484%26authkey%3D!ABJHFkrCepS7euQ%26ithint%3Dfile%252ctxt&id=250206&cbcxt=sky&cbcxt=sky&vv=1600&mkt=EN-US&lc=1033',bm:'',bn:'https://login.live.com/gls.srf?urlID=WinLiveTermsOfUse&mkt=EN-US&vv=1600',bo:'https://login.live.com/GetCredentialType.srf?wa=wsignin1.0&rpsnv=13&ct=1519804976&rver=6.7.6643.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fonedrive.live.com%2Fdownload%3Fresid%3D6BDD4375AC8933C6!4484%26authkey%3D!ABJHFkrCepS7euQ%26ithint%3Dfile%252ctxt&id=250206&cbcxt=sky&cbcxt=sky&vv=1600&mkt=EN-US&lc=1033',U:'JP',bp:'',W:false,bq:'',bs:'https://go.microsoft.com/fwlink/?LinkID=254486',bu:'',urlSwitch:'https://login.live.com/logout.srf?wa=wsignin1.0&rpsnv=13&ct=1519804976&rver=6.7.6643.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fonedrive.live.com%2Fdownload%3Fresid%3D6BDD4375AC8933C6!4484%26authkey%3D!ABJHFkrCepS7euQ%26ithint%3Dfile%252ctxt&lc=1033&id=250206&cbcxt=sky&cbcxt=sky&contextid=61679FA37493BD98&ru=https://onedrive.live.com/download%3fresid%3d6BDD4375AC8933C6!4484%26authkey%3d!ABJHFkrCepS7euQ%26ithint%3dfile%252ctxt&bk=1519804978&lm=I',urlFedConvertRename:'https://account.live.com/security/LoginStage.aspx?lmif=1000&ru=https://login.live.com/login.srf%3Fwa%3Dwsignin1.0%26rpsnv%3D13%26ct%3D1519804976%26rver%3D6.7.6643.0%26wp%3DMBI_SSL_SHARED%26wreply%3Dhttps:%252F%252Fonedrive.live.com%252Fdownload%253Fresid%253D6BDD4375AC8933C6!4484%2526authkey%253D!ABJHFkrCepS7euQ%2526ithint%253Dfile%25252ctxt%26id%3D250206%26cbcxt%3Dsky%26cbcxt%3Dsky%26vv%3D1600%26mkt%3DEN-US%26lc%3D1033&wa=wsignin1.0&rpsnv=13&ct=1519804976&rver=6.7.6643.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fonedrive.live.com%2Fdownload%3Fresid%3D6BDD4375AC8933C6!4484%26authkey%3D!ABJHFkrCepS7euQ%26ithint%3Dfile%252ctxt&cbcxt=sky&cbcxt=sky&vv=1600&mkt=EN-US&lc=1033&cbid=0&id=250206',AD:false,AE:true,a:'',c:'https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/login.srf%3fwa%3dwsignin1.0%26rpsnv%3d13%26ct%3d1519804976%26rver%3d6.7.6643.0%26wp%3dMBI_SSL_SHARED%26wreply%3dhttps:%252F%252Fonedrive.live.com%252Fdownload%253Fresid%253D6BDD4375AC8933C6!4484%2526authkey%253D!ABJHFkrCepS7euQ%2526ithint%253Dfile%25252ctxt%26lc%3d1033%26id%3d250206%26cbcxt%3dsky%26cbcxt%3dsky%26contextid%3d61679FA37493BD98%26bk%3d1519804978&id=250206&uiflavor=web&cobrandid=140703486577552&uaid=e4dc8ba75965490d94f89e704a8e4557&mkt=EN-US&lc=1033&bk=1519804978',AJ:'',e:1,g:'https://signup.live.com/?wa=wsignin1.0&rpsnv=13&ct=1519804976&rver=6.7.6643.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fonedrive.live.com%2Fdownload%3Fresid%3D6BDD4375AC8933C6!4484%26authkey%3D!ABJHFkrCepS7euQ%26ithint%3Dfile%252ctxt&id=250206&cbcxt=sky&cbcxt=sky&contextid=61679FA37493BD98&bk=1519804978&uiflavor=web&uaid=e4dc8ba75965490d94f89e704a8e4557&mkt=EN-US&lc=1033',AN:true,AQ:'Pa',B0:'wa=wsignin1.0&rpsnv=13&ct=1519804976&rver=6.7.6643.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fonedrive.live.com%2Fdownload%3Fresid%3D6BDD4375AC8933C6!4484%26authkey%3D!ABJHFkrCepS7euQ%26ithint%3Dfile%252ctxt&lc=1033&id=250206&cbcxt=sky&cbcxt=sky&contextid=61679FA37493BD98&bk=1519804978',B1:'',AR:'',m:5,B2:'',n:60,B3:'JP',sCBUpTxt1:'',p:true,B5:"&copy;2018 Microsoft",sCBUpTxt2:'',B6:"#~#partnerdomain#~# does\'t use this service. Please sign in with a Microsoft account or create a new account. <a href=\"#~#WLPaneHelpInviteBlockedURL_LS#~#\" id=\"idPaneHelpInviteBlockedLink9\">Learn More</a>",r:'',B7:'',u:'AF~Afghanistan~93!!!AL~Albania~355!!!DZ~Algeria~213!!!AD~Andorra~376!!!AO~Angola~244!!!AQ~Antarctica~672!!!AG~Antigua and Barbuda~1!!!AR~Argentina~54!!!AM~Armenia~374!!!AW~Aruba~297!!!AC~Ascension Island~247!!!AU~Australia~61!!!AT~Austria~43!!!AZ~Azerbaijan~994!!!BS~Bahamas~1!!!BH~Bahrain~973!!!BD~Bangladesh~880!!!BB~Barbados~1!!!BY~Belarus~375!!!BE~Belgium~32!!!BZ~Belize~501!!!BJ~Benin~229!!!BM~Bermuda~1!!!BT~Bhutan~975!!!BO~Bolivia~591!!!BQ~Bonaire~599!!!BA~Bosnia and Herzegovina~387!!!BW~Botswana~267!!!BV~Bouvet Island~47!!!BR~Brazil~55!!!IO~British Indian Ocean Territory~44!!!VG~British Virgin Islands~1!!!BN~Brunei~673!!!BG~Bulgaria~359!!!BF~Burkina Faso~226!!!BI~Burundi~257!!!CV~Cabo Verde~238!!!KH~Cambodia~855!!!CM~Cameroon~237!!!CA~Canada~1!!!KY~Cayman Islands~1!!!CF~Central African Republic~236!!!TD~Chad~235!!!CL~Chile~56!!!CN~China~86!!!CX~Christmas Island~61!!!CC~Cocos (Keeling) Islands~61!!!CO~Colombia~57!!!KM~Comoros~269!!!CG~Congo~242!!!CD~Congo (DRC)~243!!!CK~Cook Islands~682!!!CR~Costa Rica~506!!!CI~Cﾃｴte d\'Ivoire~225!!!HR~Croatia~385!!!CU~Cuba~53!!!CW~Curaﾃｧao~599!!!CY~Cyprus~357!!!CZ~Czechia~420!!!DK~Denmark~45!!!DJ~Djibouti~253!!!DM~Dominica~1!!!DO~Dominican Republic~1!!!EC~Ecuador~593!!!EG~Egypt~20!!!SV~El Salvador~503!!!GQ~Equatorial Guinea~240!!!ER~Eritrea~291!!!EE~Estonia~372!!!ET~Ethiopia~251!!!FK~Falkland Islands~500!!!FO~Faroe Islands~298!!!FJ~Fiji~679!!!FI~Finland~358!!!FR~France~33!!!GF~French Guiana~594!!!PF~French Polynesia~689!!!GA~Gabon~241!!!GM~Gambia~220!!!GE~Georgia~995!!!DE~Germany~49!!!GH~Ghana~233!!!GI~Gibraltar~350!!!GR~Greece~30!!!GL~Greenland~299!!!GD~Grenada~1!!!GP~Guadeloupe~590!!!GU~Guam~1!!!GT~Guatemala~502!!!GG~Guernsey~44!!!GN~Guinea~224!!!GW~Guinea-Bissau~245!!!GY~Guyana~592!!!HT~Haiti~509!!!HN~Honduras~504!!!HK~Hong Kong SAR~852!!!HU~Hungary~36!!!IS~Iceland~354!!!IN~India~91!!!ID~Indonesia~62!!!IR~Iran~98!!!IQ~Iraq~964!!!IE~Ireland~353!!!IM~Isle of Man~44!!!IL~Israel~972!!!IT~Italy~39!!!JM~Jamaica~1!!!XJ~Jan Mayen~47!!!JP~Japan~81!!!JE~Jersey~44!!!JO~Jordan~962!!!KZ~Kazakhstan~7!!!KE~Kenya~254!!!KI~Kiribati~686!!!KR~Korea~82!!!KW~Kuwait~965!!!KG~Kyrgyzstan~996!!!LA~Laos~856!!!LV~Latvia~371!!!LB~Lebanon~961!!!LS~Lesotho~266!!!LR~Liberia~231!!!LY~Libya~218!!!LI~Liechtenstein~423!!!LT~Lithuania~370!!!LU~Luxembourg~352!!!MO~Macao SAR~853!!!MK~Macedonia, Former Yugoslav Republic of~389!!!MG~Madagascar~261!!!MW~Malawi~265!!!MY~Malaysia~60!!!MV~Maldives~960!!!ML~Mali~223!!!MT~Malta~356!!!MH~Marshall Islands~692!!!MQ~Martinique~596!!!MR~Mauritania~222!!!MU~Mauritius~230!!!YT~Mayotte~262!!!MX~Mexico~52!!!FM~Micronesia~691!!!MD~Moldova~373!!!MC~Monaco~377!!!MN~Mongolia~976!!!ME~Montenegro~382!!!MS~Montserrat~1!!!MA~Morocco~212!!!MZ~Mozambique~258!!!MM~Myanmar~95!!!NA~Namibia~264!!!NR~Nauru~674!!!NP~Nepal~977!!!NL~Netherlands~31!!!AN~Netherlands Antilles (Former)~599!!!NC~New Caledonia~687!!!NZ~New Zealand~64!!!NI~Nicaragua~505!!!NE~Niger~227!!!NG~Nigeria~234!!!NU~Niue~683!!!KP~North Korea~850!!!MP~Northern Mariana Islands~1!!!NO~Norway~47!!!OM~Oman~968!!!PK~Pakistan~92!!!PW~Palau~680!!!PS~Palestinian Authority~970!!!PA~Panama~507!!!PG~Papua New Guinea~675!!!PY~Paraguay~595!!!PE~Peru~51!!!PH~Philippines~63!!!PL~Poland~48!!!PT~Portugal~351!!!QA~Qatar~974!!!RE~Rﾃｩunion~262!!!RO~Romania~40!!!RU~Russia~7!!!RW~Rwanda~250!!!XS~Saba~599!!!KN~Saint Kitts and Nevis~1!!!LC~Saint Lucia~1!!!PM~Saint Pierre and Miquelon~508!!!VC~Saint Vincent and the Grenadines~1!!!WS~Samoa~685!!!SM~San Marino~378!!!ST~Sﾃ｣o Tomﾃｩ and Prﾃｭncipe~239!!!SA~Saudi Arabia~966!!!SN~Senegal~221!!!RS~Serbia~381!!!SC~Seychelles~248!!!SL~Sierra Leone~232!!!SG~Singapore~65!!!XE~Sint Eustatius~599!!!SK~Slovakia~421!!!SI~Slovenia~386!!!SB~Solomon Islands~677!!!SO~Somalia~252!!!ZA~South Africa~27!!!SS~South Sudan~211!!!ES~Spain~34!!!LK~Sri Lanka~94!!!SH~St Helena, Ascension, and Tristan da Cunha~290!!!SD~Sudan~249!!!SR~Suriname~597!!!SJ~Svalbard~47!!!SZ~Swaziland~268!!!SE~Sweden~46!!!CH~Switzerland~41!!!SY~Syria~963!!!TW~Taiwan~886!!!TJ~Tajikistan~992!!!TZ~Tanzania~255!!!TH~Thailand~66!!!TL~Timor-Leste~670!!!TG~Togo~228!!!TK~Tokelau~690!!!TO~Tonga~676!!!TT~Trinidad and Tobago~1!!!TA~Tristan da Cunha~290!!!TN~Tunisia~216!!!TR~Turkey~90!!!TM~Turkmenistan~993!!!TC~Turks and Caicos Islands~1!!!TV~Tuvalu~688!!!UM~U.S. Outlying Islands~1!!!VI~U.S. Virgin Islands~1!!!UG~Uganda~256!!!UA~Ukraine~380!!!AE~United Arab Emirates~971!!!UK~United Kingdom~44!!!US~United States~1!!!UY~Uruguay~598!!!UZ~Uzbekistan~998!!!VU~Vanuatu~678!!!VA~Vatican City~379!!!VE~Venezuela~58!!!VN~Vietnam~84!!!WF~Wallis and Futuna~681!!!YE~Yemen~967!!!ZM~Zambia~260!!!ZW~Zimbabwe~263',correlationId:'e4dc8ba75965490d94f89e704a8e4557',oPost:{},Aa:1,BA:true,BB:0,BC:0,BD:0,BE:3,BF:0,Ah:{'Logo':'','LogoAltText':'','LogoText':'','ShowWLHeader':true},BG:0,Ai:'',BH:1,BI:0,BJ:1033,BK:2,sErrTxt:'',Am:true,BM:null,Ap:'',BO:{},BP:{},html:[],sFTTag:'<input type="hidden" name="PPFT" id="i0327" value="DVgQvkvLTSlQsX4UQ53ajYuFZfUrTllFVnymJnwR471eA14uLvxDabWNFt!trFm7ydfm1HM8DohgGkQjiVeCulFRKld42YzXckWtEtXLQIKHJQkWayRQrBbJ1a8kIuGwZ18tpElcrDFPU8a0HWgTjXSvruJxHxX!IhM6SCssCA1R7yasessqRbKYKdd7tIpi7Gy!xlXpRqn4akdjHf6G*iWjxuATL1y2CjwVP214yySK9yskG0VCqQyS8NB6bgYymQ$$"/>',BQ:'',At:false,BS:'',BV:'',BW:'PPFT',BX:'',BY:'',BZ:'',a0:true,fHasBackgroundColor:false,urlStaySignIn:'https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1519804976&rver=6.7.6643.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fonedrive.live.com%2Fdownload%3Fresid%3D6BDD4375AC8933C6!4484%26authkey%3D!ABJHFkrCepS7euQ%26ithint%3Dfile%252ctxt&id=250206&cbcxt=sky&cbcxt=sky&contextid=61679FA37493BD98&mkt=EN-US&lc=1033&bk=1519804978',Ba:true,Bc:0,a6:false,a8:true,a9:true,Bf:0};</script><script type="text/javascript" src="https://auth.gfx.ms/16.000.27701.00/ConvergedLoginPaginatedStrings.EN.js"></script><script type="text/javascript" src="https://auth.gfx.ms/16.000.27701.00/ConvergedLogin_PCore.js"></script><script type="text/javascript">SRSRetry("__ConvergedLoginPaginatedStrings","https://auth.gfx.ms/16.000.27701.00/ConvergedLoginPaginatedStrings.EN.js",1,"https://msagfx.live.com/16.000.27701.00/ConvergedLoginPaginatedStrings.EN.js");SRSRetry("__ConvergedLogin_PCore","https://auth.gfx.ms/16.000.27701.00/ConvergedLogin_PCore.js",1,"https://msagfx.live.com/16.000.27701.00/ConvergedLogin_PCore.js");</script><script type="text/javascript">SRSRetry("__ConvergedLoginPaginatedStrings","https://auth.gfx.ms/16.000.27701.00/ConvergedLoginPaginatedStrings.EN.js",2,"https://msagfx.live.com/16.000.27701.00/ConvergedLoginPaginatedStrings.EN.js");SRSRetry("__ConvergedLogin_PCore","https://auth.gfx.ms/16.000.27701.00/ConvergedLogin_PCore.js",2,"https://msagfx.live.com/16.000.27701.00/ConvergedLogin_PCore.js");</script></head><body class="cb" data-bind="defineGlobals: ServerData, bodyCssClass"></body></html>
+[error]: x264のバージョン情報が無効です。
+[debug]: x264::check():getMesBaseUrl(urlId = 0): false
+[info ]: x264のダウンロードを再試行しています(2/3)...
+[debug]: x264::check():urlId: 1
+[debug]: x264::getMesBaseUrl():url[1]:https://www.dropbox.com/s/430qrgxyiit3s0h/latest_build.txt?dl=1
+[debug]: x264::getMesBaseUrl():downloader.download(): status: RES_FIN
+[debug]: x264::getUrlVer():urlId: 1, urlText: 2901
+[info ]: x264のダウンロードリンクを取得完了
+[debug]: x264::getUrlVer():latestDownloadUrl: https://www.dropbox.com/s/cvwxbf65kn80ejg/x264_latest_x64.zip?dl=1
+[debug]: x264::getMesBaseUrl():getUrlVer(urlId = 1): latestVer: r2901
+[debug]: x264::check():bAviutlExists
+[debug]: x264::check_update():currentFileFullPath: "C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\x264_2851_x64.exe"
+[debug]: x264::getExeVer():
+[debug]: x264::getExeVer():currentFileFullPath = C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\x264_2851_x64.exe exists.
+[debug]: x264::getExeVer():get_exe_version_from_cmd(): success: rev 2851
+[info ]: x264を更新します。 r2851 → r2901
+[debug]: check():installer->check_only_all() [x264]: OK
+[debug]: x264 10bit::check_only_all():
+[debug]: x264 10bit::check_set_param():
+[debug]: x264 10bit::check_set_param():currentFileFullPath: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\x264_2851_x64.exe
+[debug]: x264 10bit::check_set_param():nInstall = False
+[debug]: x264 10bit::check_only_all():ダウンロードは必要ありません。
+[debug]: check():installer->check_only_all() [x264 10bit]: OK
+[debug]: qaac::check_only_all():
+[debug]: qaac::check_set_param():
+[debug]: qaac::check():urlId: 0
+[debug]: qaac::getMesBaseUrl():url[0]:https://sites.google.com/site/qaacpage/cabinet/
+[debug]: qaac::getMesBaseUrl():downloader.download(): status: RES_FIN
+[debug]: qaac::getUrlVer():findUrl: https://sites.google.com/site/qaacpage/cabinet/qaac_%{rev}.zip?attredirects=0&amp;d=1
+[debug]: qaac::getUrlVer():baseUrl: https://sites.google.com/site/qaacpage/cabinet/
+[debug]: qaac::getUrlVer():revString: 2.65
+[debug]: qaac::getUrlVer():revArray: 2.65
+[debug]: qaac::getMesBaseUrl():getUrlVer(urlId = 0): latestVer: 2.65
+[debug]: qaac::check():bAviutlExists
+[debug]: qaac::check_update():currentFileFullPath: "C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\qaac.exe"
+[debug]: qaac::getExeVer():currentFileFullPath = C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\qaac.exe exists.
+[debug]: qaac::getExeVer():get_exe_version_from_cmd(): success.
+[info ]: qaacを更新します。 2.64 → 2.65
+[debug]: check():installer->check_only_all() [qaac]: OK
+[debug]: l-smash::check_only_all():
+[debug]: l-smash::check_set_param():
+[debug]: l-smash::check_set_param():currentFileFullPath: C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\remuxer.exe
+[debug]: l-smash::check_set_param():latestCheckUrlList[1](id = 0): https://onedrive.live.com/download?resid=6BDD4375AC8933C6!4437&authkey=!AMidqXDZOeJtv4g&ithint=file%2ctxt
+[debug]: l-smash::check_set_param():latestCheckUrlList[2](id = 1): https://www.dropbox.com/s/f7knxwnjvispv7i/latest_build.txt?dl=1
+[debug]: l-smash::check_set_param():latestCheckUrlList[3](id = 2): https://drive.google.com/uc?export=download&id=0BzA4dIFteM2dVHJDRk9rSlE1X0E
+[debug]: l-smash::check():urlId: 0
+[debug]: l-smash::getMesBaseUrl():url[0]:https://onedrive.live.com/download?resid=6BDD4375AC8933C6!4437&authkey=!AMidqXDZOeJtv4g&ithint=file%2ctxt
+[debug]: l-smash::getMesBaseUrl():downloader.download(): status: RES_FIN
+[error]: l-smashのバージョン情報が無効です。
+[debug]: l-smash::check():getMesBaseUrl(urlId = 0): false
+[info ]: l-smashのダウンロードを再試行しています(2/3)...
+[debug]: l-smash::check():urlId: 1
+[debug]: l-smash::getMesBaseUrl():url[1]:https://www.dropbox.com/s/f7knxwnjvispv7i/latest_build.txt?dl=1
+[debug]: l-smash::getMesBaseUrl():downloader.download(): status: RES_FIN
+[debug]: l-smash::getUrlVer():urlId: 1, urlText: 1457 
+[debug]: l-smash::getUrlVer():latestDownloadUrl: https://www.dropbox.com/s/23oqjx7esbzftrc/L-SMASH%20latest.zip?dl=1
+[debug]: l-smash::getMesBaseUrl():getUrlVer(urlId = 1): latestVer: r1457
+[debug]: l-smash::check():bAviutlExists
+[debug]: l-smash::check_update():currentFileFullPath: "C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\remuxer.exe"
+[debug]: l-smash::getExeVer():
+[debug]: l-smash::getExeVer():currentFileFullPath = C:\Users\Sueda Takahito\Documents\git\2018CompterFestival\aviutl100\exe_files\remuxer.exe exists.
+[debug]: l-smash::getExeVer():get_exe_version_from_cmd(): success.
+[info ]: l-smashを更新します。 r1453 → r1457
+[debug]: check():installer->check_only_all() [l-smash]: OK
+[debug]: check():installer->check_only_all() [overall]: OK
+[debug]: abortRequired():no
